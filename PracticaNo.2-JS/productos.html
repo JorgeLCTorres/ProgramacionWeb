@@ -3,27 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Registro de productos</title>
-
-  <!--------------------------------------------------->
-
-  <!--Abril Archivo JS-->
-
-  <script src="js/registroProductos.js"></script>
-
-  <!--------------------------------------------------->
-
+  <title>Productos</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"&gt;
   <!-- Font Awesome -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <script src="https://kit.fontawesome.com/a8a964cfb5.js" crossorigin="anonymous"></script>
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
-  <!-- Estilo de Errores -->
-  <link rel="stylesheet" href="css/mensajeError.css">
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
+  <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  
 </head>
-<body class="hold-transition sidebar-mini">
+<body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -247,196 +240,40 @@
     <!-- /.sidebar -->
   </aside>
 
-
-
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>Registro de productos</h1>
-          </div>
-         
-        </div>
-      </div><!-- /.container-fluid -->
-    </section>
-
-
-  
-  
-  <!--------------------INICIO DE MODAL------------------------------->
-
-  <div class="modal fade" id="datosIncompletos">
-    <div class="modal-dialog">
-      <div class="modal-content bg-danger">
-        <div class="modal-header">
-          <h4 class="modal-title">Datos Incompletos</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p>Por favor llene todos los campos</p>
-        </div>
-        <div class="modal-footer justify-content-between">
-          <button type="button" class="btn btn-outline-light" data-dismiss="modal">Entendido</button>
-        </div>
-      </div>
-      <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-  </div>
-  <!-- /.modal -->
-
-
-
-
-  <!--------------------INICIO DE MODAL------------------------------->
-
-  <div class="modal fade" id="mostrarDatos">
-    <div class="modal-dialog">
-      <div class="modal-content bg-primary">
-        <div class="modal-header">
-          <h4 class="modal-title">Datos ingresados</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p id="modal_codigo"></p>
-          <p id="modal_nombre"></p>
-          <p id="modal_categoria"></p>
-          <p id="modal_precioVenta"></p>
-          <p id="modal_precioCompra"></p>
-        </div>
-        <div class="modal-footer justify-content-between">
-          <button type="button" class="btn btn-outline-light" data-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-outline-light">Guardar cambios</button>
-        </div>
-      </div>
-      <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-  </div>
-  <!-- /.modal -->
-
-
-
-
-  <!--------------------INICIO DE FORM------------------------------->
-
-
-    <!-- Main content -->
-    <section class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <!-- left column -->
-          <div class="col-md-6">
-            <!-- general form elements -->
-            <div class="card card-primary">
-              <div class="card-header">
-                <h3 class="card-title">Formulario</h3>
-              </div>
-              <!-- /.card-header -->
-             
-                <!--------------------------------------------------->
-
-             
-              <!-- Inicio del formulario -->
-              <form name="formProductos" id="formProductos" method="POST" action="">
-                <div class="card-body">
-                  
-                  <!--Campo Codigo-->
-                  <div class="form-group codigo">
-                    <label>Ingresa el código: (*)</label>
-                    <input type="text" class="form-control" name="codigo" id="codigo" placeholder="Proporciona código">
-                    <p class="mensajeError"></p>
-                  </div>
-
-                  <!--Campo Nombre-->
-                  <div class="form-group nombre">
-                    <label>Ingresa el nombre: (*)</label>
-                    <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Proporciona nombre">
-                    <p class="mensajeError"></p>
-                  </div>
-
-                  <!--Campo Categoria-->
-                  <div class="form-group categoria">
-                    <label>Selecciona una categoría: (*)</label><br>
-                    <select class="form-select" name="categoria" id="categoria" aria-label="Default select example">
-                      <option value="Seleccionar" selected>Seleccionar</option>
-                      <option value="Sin categoria">Sin categoria</option>
-                      <option value="Bebida">Bebida</option>
-                      <option value="Dulce">Dulce</option>
-                    </select>
-                    <p class="mensajeError"></p>
-                  </div>
-
-                  <!--Campo Precio de Venta-->
-                  <div class="form-group precioVenta">
-                    <label>Ingresa el precio de venta: (*)</label>
-                    <input type="number" class="form-control" name="precioVenta" id="precioVenta" placeholder="Proporciona precio de venta">
-                    <p class="mensajeError"></p>
-                  </div>
-
-                  <!--Campo Precio de Compra-->
-                  <div class="form-group precioCompra">
-                    <label>Ingresa el precio de compra: (*)</label>
-                    <input type="number" class="form-control" name="precioCompra" id="precioCompra" placeholder="Proporciona precio de compra">
-                    <p class="mensajeError"></p>
-                  </div>
-
-                </div>
-                <!-- /.card-body -->
-
-                <div class="card-footer">
-                  <button type="button" name= "boton" class="btn btn-primary" onClick="Subir()">Imprimir</button>
-
-                  <button type="reset" name= "botonR" class="btn btn-primary">Cancelar</button>
-
-                </div>
-                Los campos con asteriscos(*) son obligatorios.
-
-              </form>
-            </div> </div>
-            <!-- /.card -->
-      </div><!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    <div class="float-right d-none d-sm-block">
-      <b>Version</b> 3.2.0
-    </div>
-    <strong>Copyright &copy; 2014-2021 <a href="#">UPV - PW</a>.</strong> All rights reserved.
-  </footer>
-
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
-</div>
 <!-- ./wrapper -->
+    <div class="content-wrapper">
 
-<!-- jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- bs-custom-file-input -->
-<script src="plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
-<!-- AdminLTE App -->
-<script src="dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<!--script src="../../dist/js/demo.js"--></script>
-<!-- Page specific script -->
-<script>
-$(function () {
-  bsCustomFileInput.init();
-});
-</script>
+        <main>
+            <section class="py-5 text-center container">
+              <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                  <h1 class="fw-light">Productos</h1>
+                <div class="filtrado-btn">
+
+                </div>
+                </div>
+              </div>
+            </section>
+            
+            <div class="album py-5 bg-light">
+              <div class="container">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 apartado" >
+                  
+                </div>
+              </div>
+            </div>
+          
+          </main>
+    </div>
+
+</div>
+
+
+
+
+<!-- se llama al archivo js -->
+<script src="js/productos.js"></script>
+
+
 </body>
 </html>

@@ -3,25 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Registro de productos</title>
+  <title>Tabla de productos</title>
 
   <!--------------------------------------------------->
 
   <!--Abril Archivo JS-->
 
-  <script src="js/registroProductos.js"></script>
+  <script src="js/tablaProductos.js"></script>
 
   <!--------------------------------------------------->
 
-
   <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"&gt;
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
-  <!-- Estilo de Errores -->
-  <link rel="stylesheet" href="css/mensajeError.css">
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -163,7 +164,6 @@
   </nav>
   <!-- /.navbar -->
 
-
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
@@ -247,8 +247,6 @@
     <!-- /.sidebar -->
   </aside>
 
-
-
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -256,153 +254,62 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Registro de productos</h1>
+            <h1>Tabla de productos</h1>
           </div>
          
         </div>
       </div><!-- /.container-fluid -->
     </section>
 
-
-  
-  
-  <!--------------------INICIO DE MODAL------------------------------->
-
-  <div class="modal fade" id="datosIncompletos">
-    <div class="modal-dialog">
-      <div class="modal-content bg-danger">
-        <div class="modal-header">
-          <h4 class="modal-title">Datos Incompletos</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p>Por favor llene todos los campos</p>
-        </div>
-        <div class="modal-footer justify-content-between">
-          <button type="button" class="btn btn-outline-light" data-dismiss="modal">Entendido</button>
-        </div>
-      </div>
-      <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-  </div>
-  <!-- /.modal -->
-
-
-
-
-  <!--------------------INICIO DE MODAL------------------------------->
-
-  <div class="modal fade" id="mostrarDatos">
-    <div class="modal-dialog">
-      <div class="modal-content bg-primary">
-        <div class="modal-header">
-          <h4 class="modal-title">Datos ingresados</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p id="modal_codigo"></p>
-          <p id="modal_nombre"></p>
-          <p id="modal_categoria"></p>
-          <p id="modal_precioVenta"></p>
-          <p id="modal_precioCompra"></p>
-        </div>
-        <div class="modal-footer justify-content-between">
-          <button type="button" class="btn btn-outline-light" data-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-outline-light">Guardar cambios</button>
-        </div>
-      </div>
-      <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-  </div>
-  <!-- /.modal -->
-
-
-
-
-  <!--------------------INICIO DE FORM------------------------------->
-
-
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
         <div class="row">
-          <!-- left column -->
-          <div class="col-md-6">
-            <!-- general form elements -->
-            <div class="card card-primary">
-              <div class="card-header">
-                <h3 class="card-title">Formulario</h3>
+          <div class="col-12">
+            <div class="card">
+              <div class="card-body">
+                <table id="example1" class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                    <th>Código</th>
+                    <th>Nombre</th>
+                    <th>Categoría</th>
+                    <th>Precio</th>
+                    <th>Descripción</th>
+                  </tr>
+                  </thead>
+                  <tbody id="contenido">
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  </tbody>
+                  <tfoot>
+                  <tr>
+                    <th>Código</th>
+                    <th>Nombre</th>
+                    <th>Categoría</th>
+                    <th>Precio</th>
+                    <th>Descripción</th>
+                  </tr>
+                  </tfoot>
+                </table>
               </div>
-              <!-- /.card-header -->
-             
-                <!--------------------------------------------------->
-
-             
-              <!-- Inicio del formulario -->
-              <form name="formProductos" id="formProductos" method="POST" action="">
-                <div class="card-body">
-                  
-                  <!--Campo Codigo-->
-                  <div class="form-group codigo">
-                    <label>Ingresa el código: (*)</label>
-                    <input type="text" class="form-control" name="codigo" id="codigo" placeholder="Proporciona código">
-                    <p class="mensajeError"></p>
-                  </div>
-
-                  <!--Campo Nombre-->
-                  <div class="form-group nombre">
-                    <label>Ingresa el nombre: (*)</label>
-                    <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Proporciona nombre">
-                    <p class="mensajeError"></p>
-                  </div>
-
-                  <!--Campo Categoria-->
-                  <div class="form-group categoria">
-                    <label>Selecciona una categoría: (*)</label><br>
-                    <select class="form-select" name="categoria" id="categoria" aria-label="Default select example">
-                      <option value="Seleccionar" selected>Seleccionar</option>
-                      <option value="Sin categoria">Sin categoria</option>
-                      <option value="Bebida">Bebida</option>
-                      <option value="Dulce">Dulce</option>
-                    </select>
-                    <p class="mensajeError"></p>
-                  </div>
-
-                  <!--Campo Precio de Venta-->
-                  <div class="form-group precioVenta">
-                    <label>Ingresa el precio de venta: (*)</label>
-                    <input type="number" class="form-control" name="precioVenta" id="precioVenta" placeholder="Proporciona precio de venta">
-                    <p class="mensajeError"></p>
-                  </div>
-
-                  <!--Campo Precio de Compra-->
-                  <div class="form-group precioCompra">
-                    <label>Ingresa el precio de compra: (*)</label>
-                    <input type="number" class="form-control" name="precioCompra" id="precioCompra" placeholder="Proporciona precio de compra">
-                    <p class="mensajeError"></p>
-                  </div>
-
-                </div>
-                <!-- /.card-body -->
-
-                <div class="card-footer">
-                  <button type="button" name= "boton" class="btn btn-primary" onClick="Subir()">Imprimir</button>
-
-                  <button type="reset" name= "botonR" class="btn btn-primary">Cancelar</button>
-
-                </div>
-                Los campos con asteriscos(*) son obligatorios.
-
-              </form>
-            </div> </div>
+              <!-- /.card-body -->
+              <div class="card-footer">
+                <button type="button" name= "boton" class="btn btn-primary" onClick="MostrarDatos()">Ver datos</button>
+              </div>
+            </div>
             <!-- /.card -->
-      </div><!-- /.container-fluid -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
     </section>
     <!-- /.content -->
   </div>
@@ -426,17 +333,40 @@
 <script src="plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- bs-custom-file-input -->
-<script src="plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+<!-- DataTables  & Plugins -->
+<script src="plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="plugins/jszip/jszip.min.js"></script>
+<script src="plugins/pdfmake/pdfmake.min.js"></script>
+<script src="plugins/pdfmake/vfs_fonts.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <!--script src="../../dist/js/demo.js"--></script>
 <!-- Page specific script -->
 <script>
-$(function () {
-  bsCustomFileInput.init();
-});
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
 </script>
 </body>
 </html>
