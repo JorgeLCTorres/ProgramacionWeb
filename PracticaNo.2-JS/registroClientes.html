@@ -3,20 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Productos</title>
+  <title>Registro de clientes</title>
+
+  <!--------------------------------------------------->
+
+  <!--Abril Archivo JS-->
+
+  <script src="js/registroClientes.js"></script>
+
+  <!--------------------------------------------------->
+
+
+
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"&gt;
   <!-- Font Awesome -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-  <script src="https://kit.fontawesome.com/a8a964cfb5.js" crossorigin="anonymous"></script>
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
-  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
-  <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
-  
+  <!-- Estilo de Errores -->
+  <link rel="stylesheet" href="css/mensajeError.css">
 </head>
-<body class="hold-transition sidebar-mini layout-fixed">
+<body class="hold-transition sidebar-mini">
 <div class="wrapper">
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -250,40 +259,222 @@
     <!-- /.sidebar -->
   </aside>
 
-<!-- ./wrapper -->
-    <div class="content-wrapper">
 
-        <main>
-            <section class="py-5 text-center container">
-              <div class="row py-lg-5">
-                <div class="col-lg-6 col-md-8 mx-auto">
-                  <h1 class="fw-light">Productos</h1>
-                <div class="filtrado-btn">
 
-                </div>
-                </div>
-              </div>
-            </section>
-            
-            <div class="album py-5 bg-light">
-              <div class="container">
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 apartado" >
-                  
-                </div>
-              </div>
-            </div>
-          
-          </main>
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Registro de clientes</h1>
+          </div>
+         
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+
+  
+  
+  <!--------------------INICIO DE MODAL------------------------------->
+
+  <div class="modal fade" id="datosIncompletos">
+    <div class="modal-dialog">
+      <div class="modal-content bg-danger">
+        <div class="modal-header">
+          <h4 class="modal-title">Datos Incompletos</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Por favor llene todos los campos</p>
+        </div>
+        <div class="modal-footer justify-content-between">
+          <button type="button" class="btn btn-outline-light" data-dismiss="modal">Entendido</button>
+        </div>
+      </div>
+      <!-- /.modal-content -->
     </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
 
+
+  <!--------------------INICIO DE MODAL------------------------------->
+
+  <div class="modal fade" id="mostrarDatos">
+    <div class="modal-dialog">
+      <div class="modal-content bg-primary">
+        <div class="modal-header">
+          <h4 class="modal-title">Datos ingresados</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p id="modal_id"></p>
+          <p id="modal_nombre"></p>
+          <p id="modal_apellidoPaterno"></p>
+          <p id="modal_apellidoMaterno"></p>
+          <p id="modal_email"></p>
+          <p id="modal_telefono"></p>
+          <p id="modal_direccion"></p>
+          <p id="modal_rfc"></p>
+          <p id="modal_categoria"></p>
+        </div>
+        <div class="modal-footer justify-content-between">
+          <button type="button" class="btn btn-outline-light" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-outline-light">Guardar cambios</button>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+
+
+
+
+  <!--------------------INICIO DE FORM------------------------------->
+
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- left column -->
+          <div class="col-md-6">
+            <!-- general form elements -->
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Formulario</h3>
+              </div>
+              <!-- /.card-header -->
+             
+                <!--------------------------------------------------->
+
+             
+              <!-- Inicio del formulario -->
+              <form name="form1" id="form1" method="POST" action="">
+                <div class="card-body">
+
+                  <!--Campo Id-->
+                  <div class="form-group id">
+                    <label>Ingresa el id: (*)</label>
+                    <input type="text" class="form-control" name="id" id="id" placeholder="Proporciona id">
+                    <p class="mensajeError"></p>
+                  </div>
+
+                  <!--Campo Nombre-->
+                  <div class="form-group nombre">
+                    <label>Ingresa el nombre(s): (*)</label>
+                    <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Proporciona nombre(s)">
+                    <p class="mensajeError"></p>
+                  </div>
+
+                  <!--Campo Apellido Paterno-->
+                  <div class="form-group apellidoPaterno">
+                    <label>Ingresa el apellido paterno: (*)</label>
+                    <input type="text" class="form-control" name="apellidoPaterno" id="apellidoPaterno" placeholder="Proporciona apellido paterno">
+                    <p class="mensajeError"></p>
+                  </div>
+
+                  <!--Campo Apellido Materno-->
+                  <div class="form-group apellidoMaterno">
+                    <label>Ingresa el apellido materno: (*)</label>
+                    <input type="text" class="form-control" name="apellidoMaterno" id="apellidoMaterno" placeholder="Proporciona apellido materno">
+                    <p class="mensajeError"></p>
+                  </div>
+
+                  <!--Campo Email-->
+                  <div class="form-group email">
+                    <label>Ingresa el email: (*)</label>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Proporciona email">
+                    <p class="mensajeError"></p>
+                  </div>
+
+                  <!--Campo Telefono-->
+                  <div class="form-group telefono">
+                    <label>Ingresa el telefono: (*)</label>
+                    <input type="tel" class="form-control" name="telefono" id="telefono" placeholder="Proporciona telefono">
+                    <p class="mensajeError"></p>
+                  </div>
+
+                  <!--Campo Dirección-->
+                  <div class="form-group direccion">
+                    <label>Ingresa la dirección: (*)</label>
+                    <input type="text" class="form-control" name="direccion" id="direccion" placeholder="Proporciona dirección">
+                    <p class="mensajeError"></p>
+                  </div>
+
+                  <!--Campo RFC-->
+                  <div class="form-group rfc">
+                    <label>Ingresa el RFC: (*)</label>
+                    <input type="text" class="form-control" name="rfc" id="rfc" placeholder="Proporciona RFC">
+                    <p class="mensajeError"></p>
+                  </div>
+
+                  <!--Campo Categoría-->
+                  <div class="form-group categoria">
+                    <label>Ingresa la categoría: (*)</label>
+                    <input type="text" class="form-control" name="categoria" id="categoria" placeholder="Proporciona categoría">
+                    <p class="mensajeError"></p>
+                  </div>
+
+
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                  <button type="button" name= "boton" class="btn btn-primary" onClick="Subir()">Imprimir</button>
+
+                  <button type="reset" name= "botonR" class="btn btn-primary">Cancelar</button>
+
+                </div>
+                Los campos con asteriscos(*) son obligatorios.
+
+              </form>
+            </div> </div>
+            <!-- /.card -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="float-right d-none d-sm-block">
+      <b>Version</b> 3.2.0
+    </div>
+    <strong>Copyright &copy; 2014-2021 <a href="#">UPV - PW</a>.</strong> All rights reserved.
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
 </div>
+<!-- ./wrapper -->
 
-
-
-
-<!-- se llama al archivo js -->
-<script src="js/productos.js"></script>
-
-
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- bs-custom-file-input -->
+<script src="plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<!--script src="../../dist/js/demo.js"--></script>
+<!-- Page specific script -->
+<script>
+$(function () {
+  bsCustomFileInput.init();
+});
+</script>
 </body>
 </html>
