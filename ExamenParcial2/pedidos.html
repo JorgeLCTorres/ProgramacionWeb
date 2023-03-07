@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pedidos de productos</title>
+
+  <!-- Se manda llamar al archivo .js -->
+  <script src="js/pedidos.js"></script>
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"&gt;
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- SIDEBAR -->
+            <div class="sidebar">
+                <!-- USUARIO -->
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                        <img src="dist/img/perfil.jpg" class="img-circle elevation-2" alt="User Image">
+                    </div>
+                    <div class="info">
+                        <a href="#" class="d-block">Jorge Luis Charles Torres</a>
+                    </div>
+                </div>
+                <!-- OPCIONES -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+                        <!--DASHBOARD-->
+                        <li class="nav-item">
+                            <a href="dashboardVendedor.html" class="nav-link">
+                                <i class="nav-icon fas fa-th"></i>
+                                <p>Dashboard</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav> <!-- /.sidebar-menu -->
+            </div><!-- /.sidebar -->
+        </aside>
+
+        <div class="content-wrapper">
+            <!-- ENCABEZADO DE LA PAGINA -->
+            <section class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1>Pedidos de productos</h1>
+                        </div>
+                    </div>
+                </div><!-- /.container-fluid -->
+            </section>
+            
+            <!--CONTENIDO DE LA PAGINA-->
+            <section class="content">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="card">
+                        <div class="card-body">
+                          <!--TABLA CON LOS PEDIDOS DE PRODUCTOS-->
+                          <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                              <tr>
+                                <th>Usuario</th>
+                                <th>Nombre</th>
+                                <th>Nombre de producto</th>
+                                <th>Descripcion</th>
+                                <th>Precio</th>
+                                <th>Fecha estimada de entrega</th>
+                              </tr>
+                            </thead>
+                            <tbody id="contenido">
+                              <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                            </tbody>
+                            <tfoot>
+                              <tr>
+                                <th>Usuario</th>
+                                <th>Nombre</th>
+                                <th>Nombre de producto</th>
+                                <th>Descripcion</th>
+                                <th>Precio</th>
+                                <th>Fecha estimada de entrega</th>
+                              </tr>
+                            </tfoot>
+                          </table>
+                        </div> <!-- /.card-body -->
+                      </div> <!-- /.card -->
+                    </div>
+                  </div> <!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </section> <!-- /.content -->
+        </div> <!-- /.content-wrapper -->
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+    </div> <!-- ./wrapper -->
+    <!-- jQuery -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- jquery-validation -->
+    <script src="plugins/jquery-validation/jquery.validate.min.js"></script>
+    <script src="plugins/jquery-validation/additional-methods.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/adminlte.min.js"></script>
+    <script>
+        $(function () {
+            bsCustomFileInput.init();
+        });
+    </script>
+</body>
+</html>

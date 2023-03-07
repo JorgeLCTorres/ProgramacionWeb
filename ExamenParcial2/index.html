@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login</title>
+
+  <!--Mandar llamar archivo .js-->
+  <script src="js/index.js"></script>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"&gt;
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+
+        <!-- ENCABEZADO DE LA PAGINA -->
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1>Jorge Luis Charles Torres - Examen parcial 2</h1>
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+            
+        <!--MODAL DE DATOS INCORRECTOS-->
+        <div class="modal fade" id="datosIncorrectos">
+            <div class="modal-dialog">
+                <div class="modal-content bg-danger">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Dato(s) Incorrecto(s)</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Usuario y/o contraseña incorrectos. Intentelo de nuevo</p>
+                    </div>
+                    <div class="modal-footer justify-content-between">
+                        <button type="button" class="btn btn-outline-light" data-dismiss="modal">Entendido</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div> <!-- /.modal-dialog -->
+        </div> <!-- /.modal -->
+            
+        <!--FORMULARIO-->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- left column -->
+                    <div class="col-md-12">
+                        <!-- jquery validation -->
+                        <div class="card card-primary">
+                            <!-- form start -->
+                            <form name="login" id="login">
+                                <div class="card-body">
+                                    <!--Campo Usuario-->
+                                    <div class="form-group usuario">
+                                        <label>Ingrese su usuario</label>
+                                        <input type="text" name="usuario" class="form-control" id="usuario" placeholder="Proporcione un usuario">
+                                    </div>
+
+                                    <!--Campo contraseña-->
+                                    <div class="form-group clave">
+                                        <label>Ingrese su contraseña</label>
+                                        <input type="password" name="clave" class="form-control" id="clave" placeholder="Proporcione una contraseña">
+                                    </div>
+
+                                    <p>NOTA: Puede ingresar con su cuenta de cliente o vendedor</p>
+                                </div> <!-- /.card-body -->
+                                <div class="card-footer">
+                                    <button type="button" name= "boton" class="btn btn-primary" onClick="Acceder()">Acceder</button>
+                                </div>
+                            </form>
+                        </div> <!-- /.card -->
+                    </div> <!--/.col (left) -->
+                </div> <!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </section> <!-- /.content -->
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+    </div> <!-- ./wrapper -->
+    <!-- jQuery -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- jquery-validation -->
+    <script src="plugins/jquery-validation/jquery.validate.min.js"></script>
+    <script src="plugins/jquery-validation/additional-methods.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/adminlte.min.js"></script>
+    <script>
+        $(function () {
+            bsCustomFileInput.init();
+        });
+    </script>
+</body>
+</html>
