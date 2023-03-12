@@ -3,15 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Registro de categoría de productos</title>
+  <title>Registro de proveedores</title>
 
   <!--------------------------------------------------->
 
   <!--Abril Archivo JS-->
 
-  <script src="js/registroCategoriaProductos.js"></script>
+  <script src="js/registroProveedores.js"></script>
 
   <!--------------------------------------------------->
+
+
 
 
   <!-- Google Font: Source Sans Pro -->
@@ -316,7 +318,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Registro de categoría de productos</h1>
+            <h1>Registro de proveedores</h1>
           </div>
          
         </div>
@@ -351,8 +353,6 @@
   <!-- /.modal -->
 
 
-
-
   <!--------------------INICIO DE MODAL------------------------------->
 
   <div class="modal fade" id="mostrarDatos">
@@ -365,8 +365,15 @@
           </button>
         </div>
         <div class="modal-body">
-          <p id="modal_clave"></p>
+          <p id="modal_id"></p>
           <p id="modal_nombre"></p>
+          <p id="modal_apellidoPaterno"></p>
+          <p id="modal_apellidoMaterno"></p>
+          <p id="modal_email"></p>
+          <p id="modal_telefono"></p>
+          <p id="modal_direccion"></p>
+          <p id="modal_rfc"></p>
+          <p id="modal_categoria"></p>
         </div>
         <div class="modal-footer justify-content-between">
           <button type="button" class="btn btn-outline-light" data-dismiss="modal">Cerrar</button>
@@ -402,22 +409,78 @@
 
              
               <!-- Inicio del formulario -->
-              <form name="formCategorias" id="formCategorias" method="POST" action="">
+              <form name="form1" id="form1" method="POST" action="">
                 <div class="card-body">
-                  
-                  <!--Campo Clave-->
-                  <div class="form-group clave">
-                    <label>Ingresa la clave: (*)</label>
-                    <input type="text" class="form-control" name="clave" id="clave" placeholder="Proporciona clave">
+
+                  <!--Campo Id-->
+                  <div class="form-group id">
+                    <label>Ingresa el id: (*)</label>
+                    <input type="text" class="form-control" name="id" id="id" placeholder="Proporciona id">
                     <p class="mensajeError"></p>
                   </div>
 
                   <!--Campo Nombre-->
                   <div class="form-group nombre">
-                    <label>Ingresa el nombre: (*)</label>
-                    <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Proporciona nombre">
+                    <label>Ingresa el nombre(s): (*)</label>
+                    <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Proporciona nombre(s)">
                     <p class="mensajeError"></p>
                   </div>
+
+                  <!--Campo Apellido Paterno-->
+                  <div class="form-group apellidoPaterno">
+                    <label>Ingresa el apellido paterno: (*)</label>
+                    <input type="text" class="form-control" name="apellidoPaterno" id="apellidoPaterno" placeholder="Proporciona apellido paterno">
+                    <p class="mensajeError"></p>
+                  </div>
+
+                  <!--Campo Apellido Materno-->
+                  <div class="form-group apellidoMaterno">
+                    <label>Ingresa el apellido materno: (*)</label>
+                    <input type="text" class="form-control" name="apellidoMaterno" id="apellidoMaterno" placeholder="Proporciona apellido materno">
+                    <p class="mensajeError"></p>
+                  </div>
+
+                  <!--Campo Email-->
+                  <div class="form-group email">
+                    <label>Ingresa el email: (*)</label>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Proporciona email">
+                    <p class="mensajeError"></p>
+                  </div>
+
+                  <!--Campo Telefono-->
+                  <div class="form-group telefono">
+                    <label>Ingresa el telefono: (*)</label>
+                    <input type="tel" class="form-control" name="telefono" id="telefono" placeholder="Proporciona telefono">
+                    <p class="mensajeError"></p>
+                  </div>
+
+                  <!--Campo Dirección-->
+                  <div class="form-group direccion">
+                    <label>Ingresa la dirección: (*)</label>
+                    <input type="text" class="form-control" name="direccion" id="direccion" placeholder="Proporciona dirección">
+                    <p class="mensajeError"></p>
+                  </div>
+
+                  <!--Campo RFC-->
+                  <div class="form-group rfc">
+                    <label>Ingresa el RFC: (*)</label>
+                    <input type="text" class="form-control" name="rfc" id="rfc" placeholder="Proporciona RFC">
+                    <p class="mensajeError"></p>
+                  </div>
+
+                  <!--Campo Categoria-->
+                  <div class="form-group categoria">
+                    <label>Selecciona una categoría: (*)</label><br>
+                    <select class="form-select" name="categoria" id="categoria" aria-label="Default select example">
+                      <option value="Seleccionar" selected>Seleccionar</option>
+                      <option value="Sin categoria">Sin categoria</option>
+                      <option value="Local">Local</option>
+                      <option value="Nacional">Nacional</option>
+                      <option value="Internacional">Internacional</option>
+                    </select>
+                    <p class="mensajeError"></p>
+                  </div>
+
 
                 </div>
                 <!-- /.card-body -->

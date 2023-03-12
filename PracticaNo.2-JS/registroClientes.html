@@ -232,6 +232,56 @@
             </a>
           </li>
 
+          <!-- REGISTRO DE CATEGORÍA DE CLIENTES -->
+          <li class="nav-item">
+            <a href="registroCategoriaClientes.html" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Registro de categoría de clientes
+              </p>
+            </a>
+          </li>
+
+          <!-- TABLA DE CLIENTES -->
+          <li class="nav-item">
+            <a href="tablaClientes.html" class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
+              <p>
+                Tabla de clientes
+              </p>
+            </a>
+          </li>
+
+          <!-- REGISTRO DE PROVEEDORES -->
+          <li class="nav-item">
+            <a href="registroProveedores.html" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Registro de proveedores
+              </p>
+            </a>
+          </li>
+
+          <!-- REGISTRO DE CATEGORÍA DE PROVEEDORES -->
+          <li class="nav-item">
+            <a href="registroCategoriaProveedores.html" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Registro de categoría de proveedores
+              </p>
+            </a>
+          </li>
+
+          <!-- TABLA DE PROVEEDORES -->
+          <li class="nav-item">
+            <a href="tablaProveedores.html" class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
+              <p>
+                Tabla de proveedores
+              </p>
+            </a>
+          </li>
+
           <!-- TABLA DE PRODUCTOS -->
           <li class="nav-item">
             <a href="tablaProductos.html" class="nav-link">
@@ -418,10 +468,15 @@
                     <p class="mensajeError"></p>
                   </div>
 
-                  <!--Campo Categoría-->
+                  <!--Campo Categoria-->
                   <div class="form-group categoria">
-                    <label>Ingresa la categoría: (*)</label>
-                    <input type="text" class="form-control" name="categoria" id="categoria" placeholder="Proporciona categoría">
+                    <label>Selecciona una categoría: (*)</label><br>
+                    <select class="form-select" name="categoria" id="categoria" aria-label="Default select example">
+                      <option value="Seleccionar" selected>Seleccionar</option>
+                      <option value="Sin categoria">Sin categoria</option>
+                      <option value="Potencial">Potencial</option>
+                      <option value="Top">Top</option>
+                    </select>
                     <p class="mensajeError"></p>
                   </div>
 
