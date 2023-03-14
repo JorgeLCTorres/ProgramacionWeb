@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs y Galeria</title>
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!--ICONOS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body onload="mostrarImagenMision()">
+  <section class="section">
+    <div class="title">
+      <h2>UPV</h2>
+      <p>
+        Jorge Luis Charles Torres
+      </p>
+    </div>
+    <div class="about-center section-center">
+      <!--IMAGENES DE CADA UNA DE LAS PESTAÑAS-->
+      <article class="about-img">
+        <img id="misio" src="img/mision.png">
+        <img id="visio" src="img/vision.png">
+        <img id="objetivo" src="img/objetivos.jpg">
+      </article>
+      <article class="about">
+        <!--PESTAÑAS-->
+        <div class="btn-container">
+          <button class="tab-btn active" data-id="mision" onclick="mostrarImagenMision()">Misión</button>
+          <button class="tab-btn" data-id="vision" onclick="mostrarImagenVision()">Visión</button>
+          <button class="tab-btn" data-id="objetivos" onclick="mostrarImagenObjetivos()">Objetivos</button>
+        </div>
+        <div class="about-content">
+          <!-- single item -->
+          <div class="content active" id="mision">
+            <h4>Misión</h4>
+            <p>
+              Contribuir al progreso de la región mediante la formación de profesionales
+              en Tecnologías de la Información altamente calificados, con sentido humano
+              y reconocida capacidad científico-tecnológica para participar en la solución
+              de problemas a través del uso de las Tecnologías de la Información en la región,
+              estado y a nivel nacional.
+            </p>
+          </div>
+          <!-- end of single item -->
+          <!-- single item -->
+          <div class="content" id="vision">
+            <h4>Visión</h4>
+            <p>
+              Ser un programa académico reconocido por su calidad, nacional e internacionalmente
+              por el excelente desempeño profesional de sus egresados, la capacidad y compromiso
+              su planta docente, su aportación científico-tecnológica al progreso de Tamaulipas
+              y de México.
+            </p>
+          </div>
+          <!-- end of single item -->
+          <!-- single item -->
+          <div class="content" id="objetivos">
+            <h4>Objetivos</h4>
+            <p>
+              Formar profesionales conscientes de su responsabilidad ética y social, competentes
+              para el análisis de necesidades tecnológicas en las organizaciones, y el diseño,
+              desarrollo e implementación de soluciones basadas en el uso de las Tecnologías de
+              la Información.
+            </p>
+          </div>
+          <!-- end of single item -->
+        </div>
+      </article>
+    </div>
+  </section>
+  
+  <!--GALERIA-->
+  <section class="galeria completa">
+    <img
+    src="img/1.jpg"
+    title="1"
+    class="img"
+    data-id="1"
+    />
+    <img
+    src="img/2.jpg"
+    title="2"
+    class="img"
+    data-id="2"
+    />
+    <img
+    src="img/3.jpg"
+    title="3"
+    class="img"
+    data-id="3"
+    />
+    <img
+    src="img/4.jpg"
+    title="4"
+    class="img"
+    data-id="4"
+    />
+    <img
+    src="img/5.jpg"
+    title="5"
+    class="img"
+    data-id="5"
+    />
+    <img
+    src="img/6.jpg"
+    title="6"
+    class="img"
+    data-id="6"
+    />
+    <img
+    src="img/7.jpg"
+    title="7"
+    class="img"
+    data-id="7"
+    />
+    <img
+    src="img/8.jpg"
+    title="8"
+    class="img"
+    data-id="8"
+    />
+    <img
+    src="img/9.jpg"
+    title="9"
+    class="img"
+    data-id="9"
+    />
+    <img
+    src="img/10.jpg"
+    title="10"
+    class="img"
+    data-id="10"
+    />
+    <img
+    src="img/11.png"
+    title="11"
+    class="img"
+    data-id="11"
+    />
+    <img
+    src="img/12.jpg"
+    title="12"
+    class="img"
+    data-id="12"
+    />
+    <img
+    src="img/13.jpg"
+    title="13"
+    class="img"
+    data-id="13"
+    />
+    <img
+    src="img/14.jpg"
+    title="14"
+    class="img"
+    data-id="14"
+    />
+    <img
+    src="img/15.jpg"
+    title="15"
+    class="img"
+    data-id="15"
+    />
+  </section>
+
+  <!--MODAL PARA MOSTRAR IMAGEN-->
+  <div class="modal">
+    <button class="close-btn">
+      <i class="fa-solid fa-square-xmark"></i>
+    </button>
+    <div class="modal-content">
+      <button class="prev-btn">
+        <i class="fa-solid fa-caret-left"></i>
+      </button>
+      <button class="next-btn">
+        <i class="fa-solid fa-caret-right"></i>
+      </button>
+      <img src="img/1.jpg" class="main-img"/>
+      <h3 class="image-name">1</h3>
+      <div class="modal-images">
+        <img
+          src="img/1.jpg"
+          title="1"
+          id="1"
+          class="modal-img"
+        />
+        <img
+          src="img/2.jpg"
+          title="2"
+          id="2"
+          class="modal-img selected"
+        />
+      </div>
+    </div>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
