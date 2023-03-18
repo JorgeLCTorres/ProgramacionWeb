@@ -5,13 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Solicitud de empleo</title>
 
-  <!--------------------------------------------------->
 
-  <!--Abril Archivo JS-->
-
-  <script src="js/solicitudEmpleo.js"></script>
-
-  <!--------------------------------------------------->
 
 
 
@@ -351,40 +345,40 @@
                 <!-- /.card-header -->
                 <!--------------------------------------------------->
                 <!-- Inicio del formulario -->
-                <form name="form1" id="form1" method="POST" action="">
+                <form name="form1" id="form1" class="needs-validation" novalidate>
                   <div class="card-body">
                     <!--PUESTO-->
                     <div class="form-group puesto">
                       <label>Puesto que está solicitando: (*)</label>
-                      <input type="text" class="form-control" name="puesto" id="puesto" placeholder="Proporcione un puesto">
+                      <input required type="text" class="form-control" name="puesto" id="puesto" placeholder="Proporcione un puesto">
                       <p class="mensajeError"></p>
                     </div>
 
                     <!--FECHA-->
                     <div class="form-group fecha">
                       <label>Fecha: (*)</label>
-                      <input type="date" class="form-control" name="fecha" id="fecha" placeholder="Proporcione una fecha">
+                      <input   required type="date" class="form-control" name="fecha" id="fecha" placeholder="Proporcione una fecha">
                       <p class="mensajeError"></p>
                     </div>
 
                     <!--SUELDO MENSUAL DESEADO-->
                     <div class="form-group sueldoDeseado">
                       <label>Sueldo mensual deseado: (*)</label>
-                      <input type="number" class="form-control" name="sueldoDeseado" id="sueldoDeseado" placeholder="Proporcione un sueldo">
+                      <input   required type="number" class="form-control" name="sueldoDeseado" id="sueldoDeseado" placeholder="Proporcione un sueldo">
                       <p class="mensajeError"></p>
                     </div>
 
                     <!--SUELDO MENSUAL AUTORIZADO-->
                     <div class="form-group sueldoAutorizado">
                       <label>Sueldo mensual autorizado: (*)</label>
-                      <input type="number" class="form-control" name="sueldoAutorizado" id="sueldoAutorizado" placeholder="Proporcione un sueldo">
+                      <input   required type="number" class="form-control" name="sueldoAutorizado" id="sueldoAutorizado" placeholder="Proporcione un sueldo">
                       <p class="mensajeError"></p>
                     </div>
 
                     <!--FECHA CONTRATACIÓN-->
                     <div class="form-group fechaContratacion">
                       <label>Fecha de contratación: (*)</label>
-                      <input type="date" class="form-control" name="fechaContratacion" id="fechaContratacion" placeholder="Proporcione una fecha">
+                      <input   required type="date" class="form-control" name="fechaContratacion" id="fechaContratacion" placeholder="Proporcione una fecha">
                       <p class="mensajeError"></p>
                     </div>
 
@@ -395,7 +389,7 @@
                         <!--PRIMER APELLIDO-->
                         <div class="form-group pApellido">
                           <label>Primer Apellido: (*)</label>
-                          <input type="text" class="form-control" name="pApellido" id="pApellido" placeholder="Proporcione su apellido">
+                          <input   required type="text" class="form-control" name="pApellido" id="pApellido" placeholder="Proporcione su apellido">
                           <p class="mensajeError"></p>
                         </div>
                       </div>
@@ -403,7 +397,7 @@
                         <!--SEGUNDO APELLIDO-->
                         <div class="form-group sApellido">
                           <label>Segundo Apellido: (*)</label>
-                          <input type="text" class="form-control" name="sApellido" id="sApellido" placeholder="Proporcione su apellido">
+                          <input   required type="text" class="form-control" name="sApellido" id="sApellido" placeholder="Proporcione su apellido">
                           <p class="mensajeError"></p>
                         </div>
                       </div>
@@ -411,7 +405,7 @@
                         <!--NOMBRES-->
                         <div class="form-group nombres">
                           <label>Nombres: (*)</label>
-                          <input type="text" class="form-control" name="nombres" id="nombres" placeholder="Proporcione su(s) nombre(s)">
+                          <input   required type="text" class="form-control" name="nombres" id="nombres" placeholder="Proporcione su(s) nombre(s)">
                           <p class="mensajeError"></p>
                         </div>
                       </div>
@@ -419,7 +413,7 @@
                         <!--EDAD-->
                         <div class="form-group edad">
                           <label>Edad: (*)</label>
-                          <input type="number" class="form-control" name="edad" id="edad" placeholder="Proporcione su edad (años)">
+                          <input required type="number" class="form-control" name="edad" id="edad" placeholder="Proporcione su edad (años)">
                           <p class="mensajeError"></p>
                         </div>
                       </div>
@@ -430,7 +424,7 @@
                         <!--DOMICILIO-->
                         <div class="form-group domicilio">
                           <label>Domicilio: (*)</label>
-                          <input type="text" class="form-control" name="domicilio" id="domicilio" placeholder="Escriba calle y número">
+                          <input required type="text" class="form-control" name="domicilio" id="domicilio" placeholder="Escriba calle y número">
                           <p class="mensajeError"></p>
                         </div>
                       </div>
@@ -438,7 +432,7 @@
                         <!--COLONIA-->
                         <div class="form-group colonia">
                           <label>Colonia: (*)</label>
-                          <input type="text" class="form-control" name="colonia" id="colonia" placeholder="Proporcione su colonia">
+                          <input required type="text" class="form-control" name="colonia" id="colonia" placeholder="Proporcione su colonia">
                           <p class="mensajeError"></p>
                         </div>
                       </div>
@@ -446,7 +440,7 @@
                         <!--CÓDIGO POSTAL-->
                         <div class="form-group cp">
                           <label>Código Postal: (*)</label>
-                          <input type="number" class="form-control" name="cp" id="cp" placeholder="Proporcione su código postal">
+                          <input required type="number" class="form-control" name="cp" id="cp" placeholder="Proporcione su código postal">
                           <p class="mensajeError"></p>
                         </div>
                       </div>
@@ -457,7 +451,7 @@
                         <!--TELÉFONO O CELULAR-->
                         <div class="form-group telefono">
                           <label>Teléfono o Celular: (*)</label>
-                          <input type="number" class="form-control" name="telefono" id="telefono" placeholder="Proporcione su teléfono">
+                          <input required type="number" class="form-control" name="telefono" id="telefono" placeholder="Proporcione su teléfono">
                           <p class="mensajeError"></p>
                         </div>
                       </div>
@@ -465,7 +459,7 @@
                         <!--FECHA NACIMIENTO-->
                         <div class="form-group fechaNacimiento">
                           <label>Fecha de Nacimiento: (*)</label>
-                          <input type="date" class="form-control" name="fechaNacimiento" id="fechaNacimiento" placeholder="Proporcione una fecha">
+                          <input required type="date" class="form-control" name="fechaNacimiento" id="fechaNacimiento" placeholder="Proporcione una fecha">
                           <p class="mensajeError"></p>
                         </div>
                       </div>
@@ -473,8 +467,8 @@
                         <!--SEXO-->
                         <div class="form-group sexo">
                           <label>Sexo: (*)</label><br>
-                          <select class="form-select" name="sexo" id="sexo" aria-label="Default select example">
-                            <option value="Seleccionar" selected>Seleccionar</option>
+                          <select required class="form-control" name="sexo" id="sexo" aria-label="Default select example">
+                            <option value="" selected>Seleccionar</option>
                             <option value="Masculino">Masculino</option>
                             <option value="Femenino">Femenino</option>
                           </select>
@@ -488,7 +482,7 @@
                         <!--NACIONALIDAD-->
                         <div class="form-group nacionalidad">
                           <label>Nacionalidad: (*)</label>
-                          <input type="text" class="form-control" name="nacionalidad" id="nacionalidad" placeholder="Proporcione su nacionalidad">
+                          <input required type="text" class="form-control" name="nacionalidad" id="nacionalidad" placeholder="Proporcione su nacionalidad">
                           <p class="mensajeError"></p>
                         </div>
                       </div>
@@ -496,7 +490,7 @@
                         <!--CIUDAD, ESTADO DEL DOMICILIO-->
                         <div class="form-group ciudadDomicilio">
                           <label>Ciudad, Estado del Domicilio: (*)</label>
-                          <input type="text" class="form-control" name="ciudadDomicilio" id="ciudadDomicilio" placeholder="Proporcione una ciudad o alcaldía, entidad federativa">
+                          <input required type="text" class="form-control" name="ciudadDomicilio" id="ciudadDomicilio" placeholder="Proporcione una ciudad o alcaldía, entidad federativa">
                           <p class="mensajeError"></p>
                         </div>
                       </div>
@@ -504,7 +498,7 @@
                         <!--ENTIDAD FEDERATIVA (LUGAR) DE NACIMIENTO-->
                         <div class="form-group lugarNacimiento">
                           <label>Entidad Federativa (lugar) de nacimiento: (*)</label>
-                          <input type="text" class="form-control" name="lugarNacimiento" id="lugarNacimiento" placeholder="Proporcione una entidad federativa">
+                          <input required type="text" class="form-control" name="lugarNacimiento" id="lugarNacimiento" placeholder="Proporcione una entidad federativa">
                           <p class="mensajeError"></p>
                         </div>
                       </div>
@@ -515,7 +509,7 @@
                         <!--VIVE CON-->
                         <div class="form-group vive">
                           <label>Vive con: (*)</label>
-                          <input type="text" class="form-control" name="vive" id="vive" placeholder="Escriba: Padres, Familia, Parientes">
+                          <input required type="text" class="form-control" name="vive" id="vive" placeholder="Escriba: Padres, Familia, Parientes">
                           <p class="mensajeError"></p>
                         </div>
                       </div>
@@ -523,7 +517,7 @@
                         <!--PERSONAS QUE DEPENDEN DE USTED-->
                         <div class="form-group personasDependen">
                           <label>Personas que dependen de usted: (*)</label>
-                          <input type="text" class="form-control" name="personasDependen" id="personasDependen" placeholder="Escriba: Hijos, Cónyuge, Padres">
+                          <input required type="text" class="form-control" name="personasDependen" id="personasDependen" placeholder="Escriba: Hijos, Cónyuge, Padres">
                           <p class="mensajeError"></p>
                         </div>
                       </div>
@@ -531,7 +525,7 @@
                         <!--ESTADO CIVIL-->
                         <div class="form-group estadoCivil">
                           <label>Estado Civil: (*)</label>
-                          <input type="text" class="form-control" name="estadoCivil" id="estadoCivil" placeholder="Proporcione su estado civil">
+                          <input required type="text" class="form-control" name="estadoCivil" id="estadoCivil" placeholder="Proporcione su estado civil">
                           <p class="mensajeError"></p>
                         </div>
                       </div>
@@ -544,7 +538,7 @@
                         <!--CURP-->
                         <div class="form-group curp">
                           <label>Clave Única de Registro de Población (CURP): (*)</label>
-                          <input type="text" class="form-control" name="curp" id="curp" placeholder="Proporcione su CURP">
+                          <input required type="text" class="form-control" name="curp" id="curp" placeholder="Proporcione su CURP">
                           <p class="mensajeError"></p>
                         </div>
                       </div>
@@ -552,7 +546,7 @@
                         <!--AFORE-->
                         <div class="form-group afore">
                           <label>No de AFORE: (*)</label>
-                          <input type="text" class="form-control" name="afore" id="afore" placeholder="Proporcione su número de AFORE">
+                          <input required type="text" class="form-control" name="afore" id="afore" placeholder="Proporcione su número de AFORE">
                           <p class="mensajeError"></p>
                         </div>
                       </div>
@@ -560,7 +554,7 @@
                         <!--PASAPORTE-->
                         <div class="form-group pasaporte">
                           <label>Pasaporte No: (*)</label>
-                          <input type="text" class="form-control" name="pasaporte" id="pasaporte" placeholder="Proporcione su número de pasaporte">
+                          <input required type="text" class="form-control" name="pasaporte" id="pasaporte" placeholder="Proporcione su número de pasaporte">
                           <p class="mensajeError"></p>
                         </div>
                       </div>
@@ -571,7 +565,7 @@
                         <!--RFC-->
                         <div class="form-group rfc">
                           <label>Registro Federal de Contribuyentes (RFC): (*)</label>
-                          <input type="text" class="form-control" name="rfc" id="rfc" placeholder="Proporcione su RFC">
+                          <input required type="text" class="form-control" name="rfc" id="rfc" placeholder="Proporcione su RFC">
                           <p class="mensajeError"></p>
                         </div>
                       </div>
@@ -579,7 +573,7 @@
                         <!--CARTILLA MILITAR-->
                         <div class="form-group cartilla">
                           <label>Cartilla de Servicio Militar No: (*)</label>
-                          <input type="number" class="form-control" name="cartilla" id="cartilla" placeholder="Proporcione su número de cartilla">
+                          <input required type="number" class="form-control" name="cartilla" id="cartilla" placeholder="Proporcione su número de cartilla">
                           <p class="mensajeError"></p>
                         </div>
                       </div>
@@ -587,8 +581,8 @@
                         <!--LICENCIA-->
                         <div class="form-group licencia">
                           <label>¿Tiene Licencia de Manejo? (*)</label><br>
-                          <select class="form-select" name="licencia" id="licencia" aria-label="Default select example">
-                            <option value="Seleccionar" selected>Seleccionar</option>
+                          <select required class="form-control" name="licencia" id="licencia" aria-label="Default select example">
+                            <option value="" selected>Seleccionar</option>
                             <option value="Si">Si</option>
                             <option value="No">No</option>
                           </select>
@@ -602,7 +596,7 @@
                         <!--NSS-->
                         <div class="form-group nss">
                           <label>Número de Seguridad Social (NSS): (*)</label>
-                          <input type="number" class="form-control" name="nss" id="nss" placeholder="Proporcione su NSS">
+                          <input required type="number" class="form-control" name="nss" id="nss" placeholder="Proporcione su NSS">
                           <p class="mensajeError"></p>
                         </div>
                       </div>
@@ -610,7 +604,7 @@
                         <!--CLASE Y NÚMERO DE LICENCIA-->
                         <div class="form-group claseNumLicencia">
                           <label>Clase y número de licencia: (*)</label>
-                          <input type="text" class="form-control" name="claseNumLicencia" id="claseNumLicencia" placeholder="Proporcione su clase y número de licencia">
+                          <input required type="text" class="form-control" name="claseNumLicencia" id="claseNumLicencia" placeholder="Proporcione su clase y número de licencia">
                           <p class="mensajeError"></p>
                         </div>
                       </div>
@@ -618,7 +612,7 @@
                         <!--DOCUMENTOS-->
                         <div class="form-group documentos">
                           <label>Siendo extranjero que documentos le permite trabajar en el país (*)</label>
-                          <input type="text" class="form-control" name="documentos" id="documentos" placeholder="Proporcione la CLAVE del permiso de trabajo">
+                          <input required type="text" class="form-control" name="documentos" id="documentos" placeholder="Proporcione la CLAVE del permiso de trabajo">
                           <p class="mensajeError"></p>
                         </div>
                       </div>
@@ -631,7 +625,7 @@
                         <!--ENFERMEDAD CRÓNICA-->
                         <div class="form-group enfermedad">
                           <label>¿Padece alguna enfermedad crónica?: (*)</label>
-                          <input type="text" class="form-control" name="enfermedad" id="enfermedad" placeholder="Escriba Si y explique o escriba No">
+                          <input required type="text" class="form-control" name="enfermedad" id="enfermedad" placeholder="Escriba Si y explique o escriba No">
                           <p class="mensajeError"></p>
                         </div>
                       </div>
@@ -639,7 +633,7 @@
                         <!--META EN LA VIDA-->
                         <div class="form-group meta">
                           <label>¿Cuál es su meta en la vida?: (*)</label>
-                          <input type="text" class="form-control" name="meta" id="meta" placeholder="Proporcione su(s) meta(s)">
+                          <input required type="text" class="form-control" name="meta" id="meta" placeholder="Proporcione su(s) meta(s)">
                           <p class="mensajeError"></p>
                         </div>
                       </div>
@@ -647,8 +641,8 @@
                         <!--ESTADO DE SALUD-->
                         <div class="form-group salud">
                           <label>¿Cómo considera su estado de salud actual? (*)</label><br>
-                          <select class="form-select" name="salud" id="salud" aria-label="Default select example">
-                            <option value="Seleccionar" selected>Seleccionar</option>
+                          <select required class="form-control" name="salud" id="salud" aria-label="Default select example">
+                            <option value="" selected>Seleccionar</option>
                             <option value="Bueno">Bueno</option>
                             <option value="Regular">Regular</option>
                             <option value="Malo">Malo</option>
@@ -663,7 +657,7 @@
                         <!--PRACTICA DEPORTE-->
                         <div class="form-group deporte">
                           <label>¿Practica usted algún deporte?: (*)</label>
-                          <input type="text" class="form-control" name="deporte" id="deporte" placeholder="Proporcione al menos un deporte">
+                          <input required type="text" class="form-control" name="deporte" id="deporte" placeholder="Proporcione al menos un deporte">
                           <p class="mensajeError"></p>
                         </div>
                       </div>
@@ -671,7 +665,7 @@
                         <!--CLUB SOCIAL O DEPORTIVO-->
                         <div class="form-group club">
                           <label>¿Pertenece a algún Club Social o Deportivo? (*)</label>
-                          <input type="text" class="form-control" name="club" id="club" placeholder="Escriba Si y mencionelo(s) o escriba No">
+                          <input required type="text" class="form-control" name="club" id="club" placeholder="Escriba Si y mencionelo(s) o escriba No">
                           <p class="mensajeError"></p>
                         </div>
                       </div>
@@ -679,7 +673,7 @@
                         <!--TIEMPO LIBRE-->
                         <div class="form-group tiempoLibre">
                           <label>¿En qué ocupa su tiempo libre? (*)</label>
-                          <input type="text" class="form-control" name="tiempoLibre" id="tiempoLibre" placeholder="Proporcione al menos una actividad">
+                          <input required type="text" class="form-control" name="tiempoLibre" id="tiempoLibre" placeholder="Proporcione al menos una actividad">
                           <p class="mensajeError"></p>
                         </div>
                       </div>
@@ -714,15 +708,15 @@
                       <div class="col-3">
                         <!--NOMBRE PADRE-->
                         <div class="form-group nombrePadre">
-                          <input type="text" class="form-control" name="nombrePadre" id="nombrePadre" placeholder="Proporcione solo nombres">
+                          <input required type="text" class="form-control" name="nombrePadre" id="nombrePadre" placeholder="Proporcione solo nombres">
                           <p class="mensajeError"></p>
                         </div>
                       </div>
                       <div class="col-2">
                         <!--VIDA PADRE-->
                         <div class="form-group vidaPadre">
-                          <select class="form-select" name="vidaPadre" id="vidaPadre" aria-label="Default select example">
-                            <option value="Seleccionar" selected>Seleccionar</option>
+                          <select required class="form-control" name="vidaPadre" id="vidaPadre" aria-label="Default select example">
+                            <option value="" selected>Seleccionar</option>
                             <option value="Vive">Vive</option>
                             <option value="Fin">Fin</option>
                           </select>
@@ -732,14 +726,14 @@
                       <div class="col-4">
                         <!--DOMICILIO PADRE-->
                         <div class="form-group domicilioPadre">
-                          <input type="text" class="form-control" name="domicilioPadre" id="domicilioPadre" placeholder="Proporcione solo Municipio y Colonia">
+                          <input required type="text" class="form-control" name="domicilioPadre" id="domicilioPadre" placeholder="Proporcione solo Municipio y Colonia">
                           <p class="mensajeError"></p>
                         </div>
                       </div>
                       <div class="col-2">
                         <!--OCUPACIÓN PADRE-->
                         <div class="form-group ocupacionPadre">
-                          <input type="text" class="form-control" name="ocupacionPadre" id="ocupacionPadre" placeholder="Proporcione una ocupación">
+                          <input required type="text" class="form-control" name="ocupacionPadre" id="ocupacionPadre" placeholder="Proporcione una ocupación">
                           <p class="mensajeError"></p>
                         </div>
                       </div>
@@ -753,15 +747,15 @@
                       <div class="col-3">
                         <!--NOMBRE MADRE-->
                         <div class="form-group nombreMadre">
-                          <input type="text" class="form-control" name="nombreMadre" id="nombreMadre" placeholder="Proporcione solo nombres">
+                          <input required type="text" class="form-control" name="nombreMadre" id="nombreMadre" placeholder="Proporcione solo nombres">
                           <p class="mensajeError"></p>
                         </div>
                       </div>
                       <div class="col-2">
                         <!--VIDA MADRE-->
                         <div class="form-group vidaMadre">
-                          <select class="form-select" name="vidaMadre" id="vidaMadre" aria-label="Default select example">
-                            <option value="Seleccionar" selected>Seleccionar</option>
+                          <select required class="form-control" name="vidaMadre" id="vidaMadre" aria-label="Default select example">
+                            <option value="" selected>Seleccionar</option>
                             <option value="Vive">Vive</option>
                             <option value="Fin">Fin</option>
                           </select>
@@ -771,14 +765,14 @@
                       <div class="col-4">
                         <!--DOMICILIO MADRE-->
                         <div class="form-group domicilioMadre">
-                          <input type="text" class="form-control" name="domicilioMadre" id="domicilioMadre" placeholder="Proporcione solo Municipio y Colonia">
+                          <input required type="text" class="form-control" name="domicilioMadre" id="domicilioMadre" placeholder="Proporcione solo Municipio y Colonia">
                           <p class="mensajeError"></p>
                         </div>
                       </div>
                       <div class="col-2">
                         <!--OCUPACIÓN MADRE-->
                         <div class="form-group ocupacionMadre">
-                          <input type="text" class="form-control" name="ocupacionMadre" id="ocupacionMadre" placeholder="Proporcione una ocupación">
+                          <input required type="text" class="form-control" name="ocupacionMadre" id="ocupacionMadre" placeholder="Proporcione una ocupación">
                           <p class="mensajeError"></p>
                         </div>
                       </div>
@@ -792,15 +786,15 @@
                       <div class="col-3">
                         <!--NOMBRE ESPOSA(0)-->
                         <div class="form-group nombreEspos">
-                          <input type="text" class="form-control" name="nombreEspos" id="nombreEspos" placeholder="Proporcione solo nombres">
+                          <input required type="text" class="form-control" name="nombreEspos" id="nombreEspos" placeholder="Proporcione solo nombres">
                           <p class="mensajeError"></p>
                         </div>
                       </div>
                       <div class="col-2">
                         <!--VIDA ESPOSA(0)-->
                         <div class="form-group vidaEspos">
-                          <select class="form-select" name="vidaEspos" id="vidaEspos" aria-label="Default select example">
-                            <option value="Seleccionar" selected>Seleccionar</option>
+                          <select required class="form-control" name="vidaEspos" id="vidaEspos" aria-label="Default select example">
+                            <option value="" selected>Seleccionar</option>
                             <option value="Vive">Vive</option>
                             <option value="Fin">Fin</option>
                           </select>
@@ -810,14 +804,14 @@
                       <div class="col-4">
                         <!--DOMICILIO ESPOSA(O)-->
                         <div class="form-group domicilioEspos">
-                          <input type="text" class="form-control" name="domicilioEspos" id="domicilioEspos" placeholder="Proporcione solo Municipio y Colonia">
+                          <input required type="text" class="form-control" name="domicilioEspos" id="domicilioEspos" placeholder="Proporcione solo Municipio y Colonia">
                           <p class="mensajeError"></p>
                         </div>
                       </div>
                       <div class="col-2">
                         <!--OCUPACIÓN ESPOSA(O)-->
                         <div class="form-group ocupacionEspos">
-                          <input type="text" class="form-control" name="ocupacionEspos" id="ocupacionEspos" placeholder="Proporcione una ocupación">
+                          <input required type="text" class="form-control" name="ocupacionEspos" id="ocupacionEspos" placeholder="Proporcione una ocupación">
                           <p class="mensajeError"></p>
                         </div>
                       </div>
@@ -829,15 +823,284 @@
                         <label>Nombres y edades de los hijos:</label>
                       </div>
                       <div class="col-9">
-                        <!--HIJOS INPUT-->
+                        <!--HIJOS input required-->
                         <div class="form-group hijos">
-                          <input type="text" class="form-control" name="hijos" id="hijos" placeholder="Proporcione solo nombre y edad">
+                          <input required type="text" class="form-control" name="hijos" id="hijos" placeholder="Proporcione solo nombre y edad">
                           <p class="mensajeError"></p>
                         </div>
                       </div>
                     </div>
 
-                    <!--<h5 class="text-center">DOCUMENTACIÓN</h5>-->
+                    <h5 class="text-center">ESCOLARIDAD</h5>
+
+                    <div class="row">
+                      <div class="col-2">
+                        <!--NOMBRE ESCUELA-->
+                        <label>Nombre de escuela (*)</label>
+                      </div>
+                      <div class="col-4">
+                        <!--DOMICILIO ESCUELA-->
+                        <label>Domicilio (Municipio y Colonia) (*)</label>
+                      </div>
+                      <div class="col-4">
+                        <!--FECHAS-->
+                        <label>Fechas Inicio/Fin (*)</label>
+                      </div>
+                      <div class="col-2">
+                        <!--TITULO-->
+                        <label>Título Recibido (*)</label>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-1">
+                        <!--PRIMARIA LABEL-->
+                        <label>Primaria:</label>
+                      </div>
+                      <div class="col-1">
+                        <!--NOMBRE PRIMARIA-->
+                        <div class="form-group nombrePrimaria">
+                          <input required type="text" class="form-control" name="nombrePrimaria" id="nombrePrimaria" placeholder="Nombre">
+                          <p class="mensajeError"></p>
+                        </div>
+                      </div>
+                      <div class="col-4">
+                        <!--DOMICILIO PRIMARIA-->
+                        <div class="form-group domicilioPrimaria">
+                          <input required type="text" class="form-control" name="domicilioPrimaria" id="domicilioPrimaria" placeholder="Proporcione solo Municipio y Colonia">
+                          <p class="mensajeError"></p>
+                        </div>
+                      </div>
+                      <div class="col-2">
+                        <!--INICIO (FECHA)-->
+                        <div class="form-group inicioPrimaria">
+                          <input required type="date" class="form-control" name="inicioPrimaria" id="inicioPrimaria">
+                          <p class="mensajeError"></p>
+                        </div>
+                      </div>
+                      <div class="col-2">
+                        <!--FIN (FECHA)-->
+                        <div class="form-group finPrimaria">
+                          <input required type="date" class="form-control" name="finPrimaria" id="finPrimaria">
+                          <p class="mensajeError"></p>
+                        </div>
+                      </div>
+                      <div class="col-2">
+                        <!--TITULO-->
+                        <div class="form-group tituloPrimaria">
+                          <input required type="text" class="form-control" name="tituloPrimaria" id="tituloPrimaria" placeholder="Proporcione un título">
+                          <p class="mensajeError"></p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-1">
+                        <!--SECUNDARIA LABEL-->
+                        <label>Secundaria:</label>
+                      </div>
+                      <div class="col-1">
+                        <!--NOMBRE SECUNDARIA-->
+                        <div class="form-group nombreSecundaria">
+                          <input required type="text" class="form-control" name="nombreSecundaria" id="nombreSecundaria" placeholder="Nombre">
+                          <p class="mensajeError"></p>
+                        </div>
+                      </div>
+                      <div class="col-4">
+                        <!--DOMICILIO SECUNDARIA-->
+                        <div class="form-group domicilioSecundaria">
+                          <input required type="text" class="form-control" name="domicilioSecundaria" id="domicilioSecundaria" placeholder="Proporcione solo Municipio y Colonia">
+                          <p class="mensajeError"></p>
+                        </div>
+                      </div>
+                      <div class="col-2">
+                        <!--INICIO (FECHA)-->
+                        <div class="form-group inicioSecundaria">
+                          <input required type="date" class="form-control" name="inicioSecundaria" id="inicioSecundaria">
+                          <p class="mensajeError"></p>
+                        </div>
+                      </div>
+                      <div class="col-2">
+                        <!--FIN (FECHA)-->
+                        <div class="form-group finSecundaria">
+                          <input required type="date" class="form-control" name="finSecundaria" id="finSecundaria">
+                          <p class="mensajeError"></p>
+                        </div>
+                      </div>
+                      <div class="col-2">
+                        <!--TITULO-->
+                        <div class="form-group tituloSecundaria">
+                          <input required type="text" class="form-control" name="tituloSecundaria" id="tituloSecundaria" placeholder="Proporcione un título">
+                          <p class="mensajeError"></p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-1">
+                        <!--VOCACIONAL LABEL-->
+                        <label>Vocacional:</label>
+                      </div>
+                      <div class="col-1">
+                        <!--NOMBRE VOCACIONAL-->
+                        <div class="form-group nombreVocacional">
+                          <input required type="text" class="form-control" name="nombreVocacional" id="nombreVocacional" placeholder="Nombre">
+                          <p class="mensajeError"></p>
+                        </div>
+                      </div>
+                      <div class="col-4">
+                        <!--DOMICILIO VOCACIONAL-->
+                        <div class="form-group domicilioVocacional">
+                          <input required type="text" class="form-control" name="domicilioVocacional" id="domicilioVocacional" placeholder="Proporcione solo Municipio y Colonia">
+                          <p class="mensajeError"></p>
+                        </div>
+                      </div>
+                      <div class="col-2">
+                        <!--INICIO (FECHA)-->
+                        <div class="form-group inicioVocacional">
+                          <input required type="date" class="form-control" name="inicioVocacional" id="inicioVocacional">
+                          <p class="mensajeError"></p>
+                        </div>
+                      </div>
+                      <div class="col-2">
+                        <!--FIN (FECHA)-->
+                        <div class="form-group finVocacional">
+                          <input required type="date" class="form-control" name="finVocacional" id="finVocacional">
+                          <p class="mensajeError"></p>
+                        </div>
+                      </div>
+                      <div class="col-2">
+                        <!--TITULO-->
+                        <div class="form-group tituloVocacional">
+                          <input required type="text" class="form-control" name="tituloVocacional" id="tituloVocacional" placeholder="Proporcione un título">
+                          <p class="mensajeError"></p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-1">
+                        <!--PROFESIONAL LABEL-->
+                        <label>Profesional:</label>
+                      </div>
+                      <div class="col-1">
+                        <!--NOMBRE PROFESIONAL-->
+                        <div class="form-group nombreProfesional">
+                          <input required type="text" class="form-control" name="nombreProfesional" id="nombreProfesional" placeholder="Nombre">
+                          <p class="mensajeError"></p>
+                        </div>
+                      </div>
+                      <div class="col-4">
+                        <!--DOMICILIO PROFESIONAL-->
+                        <div class="form-group domicilioProfesional">
+                          <input required type="text" class="form-control" name="domicilioProfesional" id="domicilioProfesional" placeholder="Proporcione solo Municipio y Colonia">
+                          <p class="mensajeError"></p>
+                        </div>
+                      </div>
+                      <div class="col-2">
+                        <!--INICIO (FECHA)-->
+                        <div class="form-group inicioProfesional">
+                          <input required type="date" class="form-control" name="inicioProfesional" id="inicioProfesional">
+                          <p class="mensajeError"></p>
+                        </div>
+                      </div>
+                      <div class="col-2">
+                        <!--FIN (FECHA)-->
+                        <div class="form-group finProfesional">
+                          <input required type="date" class="form-control" name="finProfesional" id="finProfesional">
+                          <p class="mensajeError"></p>
+                        </div>
+                      </div>
+                      <div class="col-2">
+                        <!--TITULO-->
+                        <div class="form-group tituloProfesional">
+                          <input required type="text" class="form-control" name="tituloProfesional" id="tituloProfesional" placeholder="Proporcione un título">
+                          <p class="mensajeError"></p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-1">
+                        <!--COMERCIAL LABEL-->
+                        <label>Comercial:</label>
+                      </div>
+                      <div class="col-1">
+                        <!--NOMBRE COMERCIAL-->
+                        <div class="form-group nombreComercial">
+                          <input required type="text" class="form-control" name="nombreComercial" id="nombreComercial" placeholder="Nombre">
+                          <p class="mensajeError"></p>
+                        </div>
+                      </div>
+                      <div class="col-4">
+                        <!--DOMICILIO COMERCIAL-->
+                        <div class="form-group domicilioComercial">
+                          <input required type="text" class="form-control" name="domicilioComercial" id="domicilioComercial" placeholder="Proporcione solo Municipio y Colonia">
+                          <p class="mensajeError"></p>
+                        </div>
+                      </div>
+                      <div class="col-2">
+                        <!--INICIO (FECHA)-->
+                        <div class="form-group inicioComercial">
+                          <input required type="date" class="form-control" name="inicioComercial" id="inicioComercial">
+                          <p class="mensajeError"></p>
+                        </div>
+                      </div>
+                      <div class="col-2">
+                        <!--FIN (FECHA)-->
+                        <div class="form-group finComercial">
+                          <input required type="date" class="form-control" name="finComercial" id="finComercial">
+                          <p class="mensajeError"></p>
+                        </div>
+                      </div>
+                      <div class="col-2">
+                        <!--TITULO-->
+                        <div class="form-group tituloComercial">
+                          <input required type="text" class="form-control" name="tituloComercial" id="tituloComercial" placeholder="Proporcione un título">
+                          <p class="mensajeError"></p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <!--ESTUDIOS ACTUALES LABEL-->
+                      <label>Estudios que está efectuando en la actualidad:</label>
+                    </div>
+
+                    <div class="row">
+                      <div class="col">
+                        <!--ESCUELA ACTUAL-->
+                        <div class="form-group escuelaActual">
+                          <label>Escuela: (*)</label>
+                          <input required type="text" class="form-control" name="escuelaActual" id="escuelaActual" placeholder="Proporcione el nombre">
+                          <p class="mensajeError"></p>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <!--HORARIO ACTUAL-->
+                        <div class="form-group horarioActual">
+                          <label>Horario: (*)</label>
+                          <input required type="text" class="form-control" name="horarioActual" id="horarioActual" placeholder="Proporcione su horario">
+                          <p class="mensajeError"></p>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <!--CARRERA ACTUAL-->
+                        <div class="form-group carreraActual">
+                          <label>Curso o Carrera: (*)</label>
+                          <input required type="text" class="form-control" name="carreraActual" id="carreraActual" placeholder="Proporcione su carrera">
+                          <p class="mensajeError"></p>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <!--GRADO ACTUAL-->
+                        <div class="form-group gradoActual">
+                          <label>Grado: (*)</label>
+                          <input required type="text" class="form-control" name="gradoActual" id="gradoActual" placeholder="Proporcione su grado">
+                          <p class="mensajeError"></p>
+                        </div>
+                      </div>
+                    </div>
 
                     <!--**************************************************************************************-->
                     <!-- Inicio de Seccion de Conocimientos Generales -->
@@ -846,23 +1109,23 @@
                       <div class="form-row">
                           <div class="form-group col-md-6">
                               <label for="">Idiomas que domina</label>
-                              <input type="text" class="form-control" id="idiomas"
+                              <input name="idiomas" required type="text" class="form-control" id="idiomas"
                                   placeholder="Inglés, Español, Alemán, etc" required>
                           </div>
                           <div class="form-group col-md-6">
                               <label for="">Funciones de oficina que domina</label>
-                              <input type="text" class="form-control" id="funciones-oficina"
+                              <input name="funciones-oficina" required type="text" class="form-control" id="funciones-oficina"
                                   placeholder="Mensajería, servicios bancarios, etc" required>
                           </div>
                       </div>
                       <div class="form-group">
                           <label for="">Máquinas de oficina y/o equipo de trabajo que sepa manejar</label>
-                          <input type="text" class="form-control" id="maquinas-oficina"
+                          <input name="maquinas-oficina" required type="text" class="form-control" id="maquinas-oficina"
                               placeholder="Computadora / paquetería Office" required>
                       </div>
                       <div class="form-group">
                           <label for="">Otros trabajos o funciones que domina</label>
-                          <input type="text" class="form-control" id="otras-funciones"
+                          <input name="otras-funciones" required type="text" class="form-control" id="otras-funciones"
                               placeholder="Manejo de unidades particulares y atención al cliente" required>
                       </div>
                   </div>
@@ -890,13 +1153,13 @@
                               <label for="">Tiempo que prestó sus servicios</label>
                           </div>
                           <div class="form-group col-md-3">
-                              <input type="text" class="form-control" id="tiempo-actual" required>
+                              <input name="tiempo-actual" required type="text" class="form-control" id="tiempo-actual" required>
                           </div>
                           <div class="form-group col-md-3">
-                              <input type="text" class="form-control" id="tiempo-anterior-1" required>
+                              <input name="tiempo-anterior-1" required type="text" class="form-control" id="tiempo-anterior-1" required>
                           </div>
                           <div class="form-group col-md-3">
-                              <input type="text" class="form-control" id="tiempo-anterior-2" required>
+                              <input name="tiempo-anterior-2" required type="text" class="form-control" id="tiempo-anterior-2" required>
                           </div>
                       </div>
                       <div class="form-row">
@@ -904,13 +1167,13 @@
                               <label for="">Nombre de la Empresa</label>
                           </div>
                           <div class="form-group col-md-3">
-                              <input type="text" class="form-control" id="empresa-actual" required>
+                              <input name="empresa-actual" required type="text" class="form-control" id="empresa-actual" required>
                           </div>
                           <div class="form-group col-md-3">
-                              <input type="text" class="form-control" id="empresa-anterior-1" required>
+                              <input name="empresa-anterior-1" required type="text" class="form-control" id="empresa-anterior-1" required>
                           </div>
                           <div class="form-group col-md-3">
-                              <input type="text" class="form-control" id="empresa-anterior-2" required>
+                              <input name="empresa-anterior-2" required type="text" class="form-control" id="empresa-anterior-2" required>
                           </div>
                       </div>
                       <div class="form-row">
@@ -918,13 +1181,13 @@
                               <label for="">Domicilio</label>
                           </div>
                           <div class="form-group col-md-3">
-                              <input type="text" class="form-control" id="domicilio-empresa-actual" required>
+                              <input name="domicilio-empresa-actual" required type="text" class="form-control" id="domicilio-empresa-actual" required>
                           </div>
                           <div class="form-group col-md-3">
-                              <input type="text" class="form-control" id="domicilio-empresa-anterior-1" required>
+                              <input name="domicilio-empresa-anterior-1" required type="text" class="form-control" id="domicilio-empresa-anterior-1" required>
                           </div>
                           <div class="form-group col-md-3">
-                              <input type="text" class="form-control" id="domicilio-empresa-anterior-2" required>
+                              <input name="domicilio-empresa-anterior-2" required type="text" class="form-control" id="domicilio-empresa-anterior-2" required>
                           </div>
                       </div>
                       <div class="form-row">
@@ -932,13 +1195,13 @@
                               <label for="">Teléfono</label>
                           </div>
                           <div class="form-group col-md-3">
-                              <input type="tel" class="form-control" id="telefono-empresa-actual" required maxlength="12">
+                              <input name="telefono-empresa-actual" required type="tel" class="form-control" id="telefono-empresa-actual" required maxlength="12">
                           </div>
                           <div class="form-group col-md-3">
-                              <input type="tel" class="form-control" id="telefono-empresa-anterior-1" required maxlength="12">
+                              <input name="telefono-empresa-anterior-1" required type="tel" class="form-control" id="telefono-empresa-anterior-1" required maxlength="12">
                           </div>
                           <div class="form-group col-md-3">
-                              <input type="tel" class="form-control" id="telefono-empresa-anterior-2" required maxlength="12">
+                              <input name="telefono-empresa-anterior-2" required type="tel" class="form-control" id="telefono-empresa-anterior-2" required maxlength="12">
                           </div>
                       </div>
                       <div>
@@ -950,13 +1213,13 @@
                                   <label for="">Inicial</label>
                               </div>
                               <div class="form-group col-md-3">
-                                  <input type="text" class="form-control" id="puesto-inicial-actual" required>
+                                  <input name="puesto-inicial-actual" required type="text" class="form-control" id="puesto-inicial-actual" required>
                               </div>
                               <div class="form-group col-md-3">
-                                  <input type="text" class="form-control" id="puesto-inicial-anterior-1" required>
+                                  <input name="puesto-inicial-anterior-1" required type="text" class="form-control" id="puesto-inicial-anterior-1" required>
                               </div>
                               <div class="form-group col-md-3">
-                                  <input type="text" class="form-control" id="puesto-inicial-anterior-2" required>
+                                  <input name="puesto-final-anterior-2" required type="text" class="form-control" id="puesto-inicial-anterior-2" required>
                               </div>
                           </div>
                           <div class="form-row">
@@ -967,13 +1230,13 @@
                                   <label for="">Final</label>
                               </div>
                               <div class="form-group col-md-3">
-                                  <input type="text" class="form-control" id="puesto-final-actual" required>
+                                  <input name="puesto-final-actual" required type="text" class="form-control" id="puesto-final-actual" required>
                               </div>
                               <div class="form-group col-md-3">
-                                  <input type="text" class="form-control" id="puesto-final-anterior-1" required>
+                                  <input name="puesto-final-anterior-1" required type="text" class="form-control" id="puesto-final-anterior-1" required>
                               </div>
                               <div class="form-group col-md-3">
-                                  <input type="text" class="form-control" id="puesto-final-anterior-2" required>
+                                  <input name="puesto-final-anterior-2" required type="text" class="form-control" id="puesto-final-anterior-2" required>
                               </div>
                           </div>
                       </div>
@@ -986,13 +1249,13 @@
                                   <label for="">Inicial</label>
                               </div>
                               <div class="form-group col-md-3">
-                                  <input type="number" class="form-control" id="sueldo-inicial-actual" required>
+                                  <input name="sueldo-inicial-actual" required type="number" class="form-control" id="sueldo-inicial-actual" required>
                               </div>
                               <div class="form-group col-md-3">
-                                  <input type="number" class="form-control" id="sueldo-inicial-anterior-1" required>
+                                  <input name="sueldo-inicial-anterior-1" required type="number" class="form-control" id="sueldo-inicial-anterior-1" required>
                               </div>
                               <div class="form-group col-md-3">
-                                  <input type="number" class="form-control" id="sueldo-inicial-anterior-2" required>
+                                  <input name="sueldo-inicial-anterior-2" required type="number" class="form-control" id="sueldo-inicial-anterior-2" required>
                               </div>
                           </div>
                           <div class="form-row">
@@ -1003,13 +1266,13 @@
                                   <label for="">Final</label>
                               </div>
                               <div class="form-group col-md-3">
-                                  <input type="number" class="form-control" id="sueldo-final-actual" required>
+                                  <input name="sueldo-final-actual" required type="number" class="form-control" id="sueldo-final-actual" required>
                               </div>
                               <div class="form-group col-md-3">
-                                  <input type="number" class="form-control" id="sueldo-final-anterior-1" required>
+                                  <input name="sueldo-final-anterior-1" required type="number" class="form-control" id="sueldo-final-anterior-1" required>
                               </div>
                               <div class="form-group col-md-3">
-                                  <input type="number" class="form-control" id="sueldo-final-anterior-2" required>
+                                  <input name="sueldo-final-anterior-2" required type="number" class="form-control" id="sueldo-final-anterior-2" required>
                               </div>
                           </div>
                       </div>
@@ -1018,13 +1281,13 @@
                               <label for="">Motivos de su separación</label>
                           </div>
                           <div class="form-group col-md-3">
-                              <input type="text" class="form-control" id="separacion-actual" required>
+                              <input name="separacion-actual" required type="text" class="form-control" id="separacion-actual" required>
                           </div>
                           <div class="form-group col-md-3">
-                              <input type="text" class="form-control" id="separacion-anterior-1" required>
+                              <input name="separacion-anterior-1" required type="text" class="form-control" id="separacion-anterior-1" required>
                           </div>
                           <div class="form-group col-md-3">
-                              <input type="text" class="form-control" id="separacion-anterior-2" required>
+                              <input name="separacion-anterior-2" required type="text" class="form-control" id="separacion-anterior-2" required>
                           </div>
                       </div>
                       <div class="form-row">
@@ -1032,13 +1295,13 @@
                               <label for="">Nombre de su jefe inmediato</label>
                           </div>
                           <div class="form-group col-md-3">
-                              <input type="text" class="form-control" id="jefe-actual" required>
+                              <input name="jefe-actual" required type="text" class="form-control" id="jefe-actual" required>
                           </div>
                           <div class="form-group col-md-3">
-                              <input type="text" class="form-control" id="jefe-anterior-1" required>
+                              <input name="jefe-anterior-1" required type="text" class="form-control" id="jefe-anterior-1" required>
                           </div>
                           <div class="form-group col-md-3">
-                              <input type="text" class="form-control" id="jefe-anterior-2" required>
+                              <input name="jefe-anterior-2" required type="text" class="form-control" id="jefe-anterior-2" required>
                           </div>
                       </div>
                       <div class="form-row">
@@ -1046,13 +1309,13 @@
                               <label for="">Actividades desempeñadas</label>
                           </div>
                           <div class="form-group col-md-3">
-                              <input type="text" class="form-control" id="actividades-actual" required>
+                              <input name="actividades-actual" required type="text" class="form-control" id="actividades-actual" required>
                           </div>
                           <div class="form-group col-md-3">
-                              <input type="text" class="form-control" id="actividades-anterior-1" required>
+                              <input name="actividades-anterior-1" required type="text" class="form-control" id="actividades-anterior-1" required>
                           </div>
                           <div class="form-group col-md-3">
-                              <input type="text" class="form-control" id="actividades-anterior-2" required>
+                              <input name="actividades-anterior-2" required type="text" class="form-control" id="actividades-anterior-2" required>
                           </div>
                       </div>
                       <div class="form-row">
@@ -1060,14 +1323,14 @@
                               <label for="">Podemos solicitar informes de usted</label>
                           </div>
                           <div class="form-group col-md-2">
-                              <div class="form-check-input">
-                                  <input type="radio" class="form-check-input" id="solicitar-informe-si" name="solicitar-informe" required>
+                              <div class="form-check-input required">
+                                  <input value="Si" required type="radio" class="form-check-input required" id="solicitar-informe-si" name="solicitar-informe" required>
                                   <label for="">Si</label>
                               </div>
                           </div>
                           <div class="form-group col-md-2">
-                              <div class="form-check-input">
-                                  <input type="radio" class="form-check-input" id="solicitar-informe-no" name="solicitar-informe" required>
+                              <div class="form-check-input required">
+                                  <input value="No" required type="radio" class="form-check-input required" id="solicitar-informe-no" name="solicitar-informe" required>
                                   <label for="">No</label>
                               </div>
                           </div>
@@ -1097,53 +1360,53 @@
                       </div>
                       <div class="form-row">
                           <div class="form-group col-md">
-                              <input type="text" class="form-control" id="nombre-1" required>
+                              <input name="nombre-1" required type="text" class="form-control" id="nombre-1" required>
                           </div>
                           <div class="form-group col-md">
-                              <input type="text" class="form-control" id="domicilio-1" required>
+                              <input name="domicilio-1" required type="text" class="form-control" id="domicilio-1" required>
                           </div>
                           <div class="form-group col-md">
-                              <input type="tel" class="form-control" id="telefono-1" required maxlength="12">
+                              <input name="telefono-1" required type="tel" class="form-control" id="telefono-1" required maxlength="12">
                           </div>
                           <div class="form-group col-md">
-                              <input type="text" class="form-control" id="ocupacion-1" required>
+                              <input name="ocupacion-1" required type="text" class="form-control" id="ocupacion-1" required>
                           </div>
                           <div class="form-group col-md">
-                              <input type="text" class="form-control" id="tiempo-1" required>
-                          </div>
-                      </div>
-                      <div class="form-row">
-                          <div class="form-group col-md">
-                              <input type="text" class="form-control" id="nombre-2" required>
-                          </div>
-                          <div class="form-group col-md">
-                              <input type="text" class="form-control" id="domicilio-2" required>
-                          </div>
-                          <div class="form-group col-md">
-                              <input type="tel" class="form-control" id="telefono-2" required maxlength="12">
-                          </div>
-                          <div class="form-group col-md">
-                              <input type="text" class="form-control" id="ocupacion-2" required>
-                          </div>
-                          <div class="form-group col-md">
-                              <input type="text" class="form-control" id="tiempo-2" required>
+                              <input name="tiempo-1" required type="text" class="form-control" id="tiempo-1" required>
                           </div>
                       </div>
                       <div class="form-row">
                           <div class="form-group col-md">
-                              <input type="text" class="form-control" id="nombre-3" required>
+                              <input name="nombre-2" required type="text" class="form-control" id="nombre-2" required>
                           </div>
                           <div class="form-group col-md">
-                              <input type="text" class="form-control" id="domicilio-3" required>
+                              <input name="domicilio-2" required type="text" class="form-control" id="domicilio-2" required>
                           </div>
                           <div class="form-group col-md">
-                              <input type="tel" class="form-control" id="telefono-3" required maxlength="12">
+                              <input name="telefono-2" required type="tel" class="form-control" id="telefono-2" required maxlength="12">
                           </div>
                           <div class="form-group col-md">
-                              <input type="text" class="form-control" id="ocupacion-3" required>
+                              <input name="ocupacion-2" required type="text" class="form-control" id="ocupacion-2" required>
                           </div>
                           <div class="form-group col-md">
-                              <input type="text" class="form-control" id="tiempo-3" required>
+                              <input name="tiempo-2" required type="text" class="form-control" id="tiempo-2" required>
+                          </div>
+                      </div>
+                      <div class="form-row">
+                          <div class="form-group col-md">
+                              <input name="nombre-3" required type="text" class="form-control" id="nombre-3" required>
+                          </div>
+                          <div class="form-group col-md">
+                              <input name="domicilio-3" required type="text" class="form-control" id="domicilio-3" required>
+                          </div>
+                          <div class="form-group col-md">
+                              <input name="telefono-3" required type="tel" class="form-control" id="telefono-3" required maxlength="12">
+                          </div>
+                          <div class="form-group col-md">
+                              <input name="ocupacion-3" required type="text" class="form-control" id="ocupacion-3" required>
+                          </div>
+                          <div class="form-group col-md">
+                              <input name="tiempo-3" required type="text" class="form-control" id="tiempo-3" required>
                           </div>
                       </div>
                   </div>
@@ -1157,14 +1420,14 @@
                               <label for="">¿Cómo se enteró de este empleo?</label>
                           </div>
                           <div class="form-group col-md-2">
-                              <div class="form-check-input">
-                                  <input type="radio" class="form-check-input" id="por-anuncio" name="entero-empleo" required>
+                              <div class="form-check-input required">
+                                  <input value="Anuncio" required type="radio" class="form-check-input required" id="por-anuncio" name="entero-empleo" required>
                                   <label for="">Anuncio</label>
                               </div>
                           </div>
                           <div class="form-group col-md-2">
-                              <div class="form-check-input">
-                                  <input type="radio" class="form-check-input" id="por-otro-medio" name="entero-empleo" required>
+                              <div class="form-check-input required">
+                                  <input value="Otro medio" required type="radio" class="form-check-input required" id="por-otro-medio" name="entero-empleo" required>
                                   <label for="">Otro medio</label>
                               </div>
                           </div>
@@ -1174,14 +1437,14 @@
                               <label for="">¿Tienes familiares y/o amigos que laboren en esta empresa?</label>
                           </div>
                           <div class="form-group col-md-2">
-                              <div class="form-check-input">
-                                  <input type="radio" class="form-check-input" id="familia-empresa-si" name="familia-empresa" required>
+                              <div class="form-check-input required">
+                                  <input value="Si" required type="radio" class="form-check-input required" id="familia-empresa-si" name="familia-empresa" required>
                                   <label for="">Si</label>
                               </div>
                           </div>
                           <div class="form-group col-md-2">
-                              <div class="form-check-input">
-                                  <input type="radio" class="form-check-input" id="familia-empresa-no" name="familia-empresa" required>
+                              <div class="form-check-input required">
+                                  <input value="No" required type="radio" class="form-check-input required" id="familia-empresa-no" name="familia-empresa" required>
                                   <label for="">No</label>
                               </div>
                           </div>
@@ -1191,14 +1454,14 @@
                               <label for="">¿Ha estado Afianzado?</label>
                           </div>
                           <div class="form-group col-md-2">
-                              <div class="form-check-input">
-                                  <input type="radio" class="form-check-input" id="afianzado-si" name="afianzado" required>
+                              <div class="form-check-input required">
+                                  <input value="Si" required type="radio" class="form-check-input required" id="afianzado-si" name="afianzado" required>
                                   <label for="">Si</label>
                               </div>
                           </div>
                           <div class="form-group col-md-2">
-                              <div class="form-check-input">
-                                  <input type="radio" class="form-check-input" id="afianzado-no" name="afianzado" required>
+                              <div class="form-check-input required">
+                                  <input value="No" required type="radio" class="form-check-input required" id="afianzado-no" name="afianzado" required>
                                   <label for="">No</label>
                               </div>
                           </div>
@@ -1208,14 +1471,14 @@
                               <label for="">¿Pertenece a algún sindicato?</label>
                           </div>
                           <div class="form-group col-md-2">
-                              <div class="form-check-input">
-                                  <input type="radio" class="form-check-input" id="sindicato-si" name="sindicato" required>
+                              <div class="form-check-input required">
+                                  <input value="Si" required type="radio" class="form-check-input required" id="sindicato-si" name="sindicato" required>
                                   <label for="">Si</label>
                               </div>
                           </div>
                           <div class="form-group col-md-2">
-                              <div class="form-check-input">
-                                  <input type="radio" class="form-check-input" id="sindicato-no" name="sindicato" required>
+                              <div class="form-check-input required">
+                                  <input value="No" required type="radio" class="form-check-input required" id="sindicato-no" name="sindicato" required>
                                   <label for="">No</label>
                               </div>
                           </div>
@@ -1225,14 +1488,14 @@
                               <label for="">¿Paga renta?</label>
                           </div>
                           <div class="form-group col-md-2">
-                              <div class="form-check-input">
-                                  <input type="radio" class="form-check-input" id="paga-renta-si" name="paga-renta" required>
+                              <div class="form-check-input required">
+                                  <input value="Si" required type="radio" class="form-check-input required" id="paga-renta-si" name="paga-renta" required>
                                   <label for="">Si</label>
                               </div>
                           </div>
                           <div class="form-group col-md-2">
-                              <div class="form-check-input">
-                                  <input type="radio" class="form-check-input" id="paga-renta-no" name="paga-renta" required>
+                              <div class="form-check-input required">
+                                  <input value="No" required type="radio" class="form-check-input required" id="paga-renta-no" name="paga-renta" required>
                                   <label for="">No</label>
                               </div>
                           </div>
@@ -1242,14 +1505,14 @@
                               <label for="">¿Tiene seguro de vida?</label>
                           </div>
                           <div class="form-group col-md-2">
-                              <div class="form-check-input">
-                                  <input type="radio" class="form-check-input" id="seguro-vida-si" name="seguro-vida" required>
+                              <div class="form-check-input required">
+                                  <input value="Si" required type="radio" class="form-check-input required" id="seguro-vida-si" name="seguro-vida" required>
                                   <label for="">Si</label>
                               </div>
                           </div>
                           <div class="form-group col-md-2">
-                              <div class="form-check-input">
-                                  <input type="radio" class="form-check-input" id="seguro-vida-no" name="seguro-vida" required>
+                              <div class="form-check-input required">
+                                  <input value="No" required type="radio" class="form-check-input required" id="seguro-vida-no" name="seguro-vida" required>
                                   <label for="">No</label>
                               </div>
                           </div>
@@ -1259,14 +1522,14 @@
                               <label for="">¿Puede viajar?</label>
                           </div>
                           <div class="form-group col-md-2">
-                              <div class="form-check-input">
-                                  <input type="radio" class="form-check-input" id="puede-viajar-si" name="puede-viajar" required>
+                              <div class="form-check-input required">
+                                  <input value="Si" required type="radio" class="form-check-input required" id="puede-viajar-si" name="puede-viajar" required>
                                   <label for="">Si</label>
                               </div>
                           </div>
                           <div class="form-group col-md-2">
-                              <div class="form-check-input">
-                                  <input type="radio" class="form-check-input" id="puede-viajar-no" name="puede-viajar" required>
+                              <div class="form-check-input required">
+                                  <input value="No" required type="radio" class="form-check-input required" id="puede-viajar-no" name="puede-viajar" required>
                                   <label for="">No</label>
                               </div>
                           </div>
@@ -1276,14 +1539,14 @@
                               <label for="">¿Está dispuesto a cambiar de lugar de residencia?</label>
                           </div>
                           <div class="form-group col-md-2">
-                              <div class="form-check-input">
-                                  <input type="radio" class="form-check-input" id="cambiar-residencia-si" name="cambiar-residencia" required>
+                              <div class="form-check-input required">
+                                  <input value="Si" required type="radio" class="form-check-input required" id="cambiar-residencia-si" name="cambiar-residencia" required>
                                   <label for="">Si</label>
                               </div>
                           </div>
                           <div class="form-group col-md-2">
-                              <div class="form-check-input">
-                                  <input type="radio" class="form-check-input" id="cambiar-residencia-no" name="cambiar-residencia" required>
+                              <div class="form-check-input required">
+                                  <input value="No" required type="radio" class="form-check-input required" id="cambiar-residencia-no" name="cambiar-residencia" required>
                                   <label for="">No</label>
                               </div>
                           </div>
@@ -1293,7 +1556,7 @@
                               <label for="">¿Fecha en que podría presentarse a trabajar?</label>
                           </div>
                           <div class="form-group col-md-6">
-                              <input type="date" class="form-control" id="fecha-presentarse" required>
+                              <input name="fecha-presentarse" required type="date" class="form-control" id="fecha-presentarse" required>
                           </div>
                       </div>
                   </div>
@@ -1307,14 +1570,14 @@
                               <label for="">¿Tiene usted otros ingresos?</label>
                           </div>
                           <div class="form-group col-md-2">
-                              <div class="form-check-input">
-                                  <input type="radio" class="form-check-input" id="otros-ingresos-si" name="otros-ingresos" required>
+                              <div class="form-check-input required">
+                                  <input value="Si" required type="radio" class="form-check-input required" id="otros-ingresos-si" name="otros-ingresos" required>
                                   <label for="">Si</label>
                               </div>
                           </div>
                           <div class="form-group col-md-2">
-                              <div class="form-check-input">
-                                  <input type="radio" class="form-check-input" id="otros-ingresos-no" name="otros-ingresos" required>
+                              <div class="form-check-input required">
+                                  <input value="No" required type="radio" class="form-check-input required" id="otros-ingresos-no" name="otros-ingresos" required>
                                   <label for="">No</label>
                               </div>
                           </div>
@@ -1324,14 +1587,14 @@
                               <label for="">¿Su cónyugue trabaja?</label>
                           </div>
                           <div class="form-group col-md-2">
-                              <div class="form-check-input">
-                                  <input type="radio" class="form-check-input" id="conyugue-trabaja-si" name="conyugue-trabaja" required>
+                              <div class="form-check-input required">
+                                  <input value="Si" required type="radio" class="form-check-input required" id="conyugue-trabaja-si" name="conyugue-trabaja" required>
                                   <label for="">Si</label>
                               </div>
                           </div>
                           <div class="form-group col-md-2">
-                              <div class="form-check-input">
-                                  <input type="radio" class="form-check-input" id="conyugue-trabaja-no" name="conyugue-trabaja" required>
+                              <div class="form-check-input required">
+                                  <input value="No" required type="radio" class="form-check-input required" id="conyugue-trabaja-no" name="conyugue-trabaja" required>
                                   <label for="">No</label>
                               </div>
                           </div>
@@ -1341,14 +1604,14 @@
                               <label for="">¿Vive en casa propia?</label>
                           </div>
                           <div class="form-group col-md-2">
-                              <div class="form-check-input">
-                                  <input type="radio" class="form-check-input" id="casa-propia-si" name="casa-propia" required>
+                              <div class="form-check-input required">
+                                  <input value="Si" required type="radio" class="form-check-input required" id="casa-propia-si" name="casa-propia" required>
                                   <label for="">Si</label>
                               </div>
                           </div>
                           <div class="form-group col-md-2">
-                              <div class="form-check-input">
-                                  <input type="radio" class="form-check-input" id="casa-propia-no" name="casa-propia" required>
+                              <div class="form-check-input required">
+                                  <input value="No" required type="radio" class="form-check-input required" id="casa-propia-no" name="casa-propia" required>
                                   <label for="">No</label>
                               </div>
                           </div>
@@ -1358,14 +1621,14 @@
                               <label for="">¿Paga renta?</label>
                           </div>
                           <div class="form-group col-md-2">
-                              <div class="form-check-input">
-                                  <input type="radio" class="form-check-input" id="paga-renta-si" name="paga-renta" required>
+                              <div class="form-check-input required">
+                                  <input value="Si" required type="radio" class="form-check-input required" id="paga-renta-s2" name="paga-renta-2" required>
                                   <label for="">Si</label>
                               </div>
                           </div>
                           <div class="form-group col-md-2">
-                              <div class="form-check-input">
-                                  <input type="radio" class="form-check-input" id="paga-renta-no" name="paga-renta" required>
+                              <div class="form-check-input required">
+                                  <input value="No" required type="radio" class="form-check-input required" id="paga-renta-no-s2" name="paga-renta-2" required>
                                   <label for="">No</label>
                               </div>
                           </div>
@@ -1375,14 +1638,14 @@
                               <label for="">¿Tiene automóvil propio?</label>
                           </div>
                           <div class="form-group col-md-2">
-                              <div class="form-check-input">
-                                  <input type="radio" class="form-check-input" id="auto-propio-si" name="auto-propio" required>
+                              <div class="form-check-input required">
+                                  <input value="Si" required type="radio" class="form-check-input required" id="auto-propio-si" name="auto-propio" required>
                                   <label for="">Si</label>
                               </div>
                           </div>
                           <div class="form-group col-md-2">
-                              <div class="form-check-input">
-                                  <input type="radio" class="form-check-input" id="auto-propio-no" name="auto-propio" required>
+                              <div class="form-check-input required">
+                                  <input value="No" required type="radio" class="form-check-input required" id="auto-propio-no" name="auto-propio" required>
                                   <label for="">No</label>
                               </div>
                           </div>
@@ -1392,14 +1655,14 @@
                               <label for="">¿Tienes Deudas</label>
                           </div>
                           <div class="form-group col-md-2">
-                              <div class="form-check-input">
-                                  <input type="radio" class="form-check-input" id="deudas-si" name="deudas" required>
+                              <div class="form-check-input required">
+                                  <input value="Si" required type="radio" class="form-check-input required" id="deudas-si" name="deudas" required>
                                   <label for="">Si</label>
                               </div>
                           </div>
                           <div class="form-group col-md-2">
-                              <div class="form-check-input">
-                                  <input type="radio" class="form-check-input" id="deudas-no" name="deudas" required>
+                              <div class="form-check-input required">
+                                  <input value="No" required type="radio" class="form-check-input required" id="deudas-no" name="deudas" required>
                                   <label for="">No</label>
                               </div>
                           </div>
@@ -1409,13 +1672,13 @@
                               <label for="">Ingresos $</label>
                           </div>
                           <div class="form-group col-md-2">
-                              <input type="number" class="form-control" id="ingresos" required>
+                              <input name="ingresos" required type="number" class="form-control" id="ingresos" required>
                           </div>
                           <div class="form-group col-md-2">
                               <label for="">Ahorros $</label>
                           </div>
                           <div class="form-group col-md-2">
-                              <input type="number" class="form-control" id="ahorros" required>
+                              <input name="ahorros" required type="number" class="form-control" id="ahorros" required>
                           </div>
                       </div>
                       <div class="form-row">
@@ -1423,13 +1686,13 @@
                               <label for="">Egresos $</label>
                           </div>
                           <div class="form-group col-md-2">
-                              <input type="number" class="form-control" id="egresos" required>
+                              <input name="egresos" required type="number" class="form-control" id="egresos" required>
                           </div>
                           <div class="form-group col-md-2">
                               <label for="">Total $</label>
                           </div>
                           <div class="form-group col-md-2">
-                              <input type="number" class="form-control" id="total" required>
+                              <input name="total" required type="number" class="form-control" id="total" required>
                           </div>
                       </div>
                       <div class="form-row">
@@ -1437,7 +1700,7 @@
                               <label for="">¿Cuánto abona mensualmente? $</label>
                           </div>
                           <div class="form-group col-md-2">
-                              <input type="number" class="form-control" id="abono-mensual" required>
+                              <input name="abono-mensual" required type="number" class="form-control" id="abono-mensual" required>
                           </div>
                       </div>
                   </div>
@@ -1447,8 +1710,9 @@
                   </div> <!-- /.card-body -->
                   
                   <div class="card-footer">
-                    <button type="button" name= "boton" class="btn btn-primary" onClick="Subir()">Imprimir</button>
-                    <button type="reset" name= "botonR" class="btn btn-primary">Cancelar</button>
+                    <button type="submit" name= "subir" id= "subir" class="btn btn-primary">Subir</button>
+                    <button type="button" name= "cancelar" class="btn btn-danger" onclick="Cancelar()">Cancelar</button>
+                    <button type="button" name="descargar" id="descargar" class="btn btn-primary" style="display: none;">Descargar</button>
                   </div>
                   Los campos con asteriscos(*) son obligatorios.
                 </form>
@@ -1458,6 +1722,15 @@
         </div>
       </section> <!-- /.content -->
     </div> <!-- /.content-wrapper -->
+
+    <!--VENTANA LOADER-->
+    <div id="loader-overlay" class="d-none">
+      <div id="loader-container" class="fixed-top fixed-bottom d-flex justify-content-center align-items-center">
+      <div class="spinner-border text-primary" role="status">
+        <span class="sr-only">c a r g a n d o . . .</span>
+      </div>
+      </div>
+    </div>
     
     <footer class="main-footer">
       <div class="float-right d-none d-sm-block">
@@ -1472,21 +1745,22 @@
     </aside> <!-- /.control-sidebar -->
   </div> <!-- ./wrapper -->
 
-<!-- jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- bs-custom-file-input -->
-<script src="plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
-<!-- AdminLTE App -->
-<script src="dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<!--script src="../../dist/js/demo.js"--></script>
-<!-- Page specific script -->
-<script>
-$(function () {
-  bsCustomFileInput.init();
-});
-</script>
+	<!-- jQuery -->
+	<script src="plugins/jquery/jquery.min.js"></script>
+	<!-- Bootstrap 4 -->
+	<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<!-- jquery-validation -->
+	<script src="plugins/jquery-validation/jquery.validate.min.js"></script>
+	<script src="plugins/jquery-validation/additional-methods.min.js"></script>
+	<!-- SweetAlert2 -->
+	<script src="plugins/sweetalert2/sweetalert2.min.js"></script>
+	<script src="dist/js/adminlte.min.js"></script>
+  <!--------------------------------------------------->
+
+  <!--Abril Archivo JS-->
+
+  <script src="js/solicitudEmpleo.js"></script>
+
+  <!--------------------------------------------------->
 </body>
 </html>
