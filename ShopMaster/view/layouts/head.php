@@ -24,3 +24,6 @@
 
 <!-- Template Stylesheet -->
 <link href="../css/style.css" rel="stylesheet">
+
+<!-- SweetAlert2 -->
+<link rel="stylesheet" href="../plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">

@@ -11,3 +11,8 @@
 
 <!-- Template Javascript -->
 <script src="../js/main.js"></script>
+
+<!-- jQuery -->
+<script src="../plugins/jquery/jquery.min.js"></script>
+<!-- SweetAlert2 -->
+<script src="../plugins/sweetalert2/sweetalert2.min.js"></script>
