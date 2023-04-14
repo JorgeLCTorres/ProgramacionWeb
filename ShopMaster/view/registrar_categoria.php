@@ -10,7 +10,7 @@ if ($_SESSION['session']['username'] == null || $_SESSION['session']['username']
 <html lang="en">
 
 <head>
-    <title>Registrar tienda</title>
+    <title>Registrar categoria</title>
     <!-- SE INCLUYEN LAS ETIQUETAS DE REFERENCIA link -->
     <?php
     include("./layouts/head.php");
@@ -38,27 +38,18 @@ if ($_SESSION['session']['username'] == null || $_SESSION['session']['username']
                 <div class="row g-4">
                     <div class="col-sm-12 col-xl-12">
                         <div class="bg-secondary rounded h-100 p-4">
-                            <h6 class="mb-4">Registrar tienda</h6>
-                            <form id="registrar_tienda"  action="" novalidate>
+                            <h6 class="mb-4">Registrar categoria</h6>
+                            <form id="registrar_categoria"  action="">
                                 <!-- CAMPO DE NOMBRE -->
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese el nombre de la tienda" required>
+                                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese el nombre de la categoría" required>
                                     <label for="floatingInput">Nombre</label>
                                 </div>
-                                <!-- RADIO DE ESTADO -->
-                                <fieldset class="row mb-3">
-                                    <legend class="col-form-label col-sm-2 pt-0">Estado</legend>
-                                    <div class="col-sm-10">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="estado" id="activa" value="1" checked>
-                                            <label class="form-check-label" for="activa">Activa</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="estado" id="inactiva" value="2">
-                                            <label class="form-check-label" for="inactiva">Inactiva</label>
-                                        </div>
-                                    </div>
-                                </fieldset>
+                                <!-- CAMPO DE DESCRIPCIÓN -->
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="Ingrese la descripción de la categoría" required>
+                                    <label for="floatingInput">Descripción</label>
+                                </div>
                                 <!-- BOTÓN DE REGISTRAR -->
                                 <button type="submit" class="btn btn-primary rounded-pill m-2">Registrar</button>
                             </form>
@@ -87,7 +78,7 @@ if ($_SESSION['session']['username'] == null || $_SESSION['session']['username']
     ?>
     
     <!-- SE INCLUYEN EL JS CORRESPONDIENTE A ESTA PÁGINA -->
-    <script src="../js/registrar_tienda.js"></script>
+    <script src="../js/registrar_categoria.js"></script>
 </body>
 
 </html>

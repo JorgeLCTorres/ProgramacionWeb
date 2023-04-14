@@ -1,4 +1,5 @@
 <?php
+//SE INICIA LA SESIÓN
 session_start();
 ?>
 <!-- Navbar Start -->
@@ -11,11 +12,13 @@ session_start();
     </a>
     <div class="navbar-nav align-items-center ms-auto">
         <div class="nav-item dropdown">
+            <!-- SE USA EL DATO username DE LA SESIÓN PARA MOSTRARLO EN EL NAVBAR -->
             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                 <span class="d-none d-lg-inline-flex">
                     <?php echo $_SESSION['session']['username'] ?>
                 </span>
             </a>
+            <!-- SE AGREGA LA OPCIÓN DE LOG OUT QUE REDIRECCIONA AL ARCHIVO logout.php -->
             <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
                 <a href="../controller/logout.php" class="dropdown-item">Log Out</a>
             </div>

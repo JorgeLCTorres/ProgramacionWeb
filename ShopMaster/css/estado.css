@@ -1,0 +1,13 @@
+.activa{
+    border-radius: 100px;
+    background-color: #119200;
+    box-shadow: 0px 0px 10px 6px #119200;
+    color: #ffffff;
+}
+
+.inactiva{
+    border-radius: 100px;
+    background-color: #920000;
+    box-shadow: 0px 0px 10px 6px #920000;
+    color: #ffffff;
+}

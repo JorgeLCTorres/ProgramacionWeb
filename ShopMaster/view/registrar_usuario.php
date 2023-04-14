@@ -10,7 +10,7 @@ if ($_SESSION['session']['username'] == null || $_SESSION['session']['username']
 <html lang="en">
 
 <head>
-    <title>Registrar tienda</title>
+    <title>Registrar usuario</title>
     <!-- SE INCLUYEN LAS ETIQUETAS DE REFERENCIA link -->
     <?php
     include("./layouts/head.php");
@@ -38,27 +38,33 @@ if ($_SESSION['session']['username'] == null || $_SESSION['session']['username']
                 <div class="row g-4">
                     <div class="col-sm-12 col-xl-12">
                         <div class="bg-secondary rounded h-100 p-4">
-                            <h6 class="mb-4">Registrar tienda</h6>
-                            <form id="registrar_tienda"  action="" novalidate>
+                            <h6 class="mb-4">Registrar usuario</h6>
+                            <form id="registrar_usuario"  action="">
                                 <!-- CAMPO DE NOMBRE -->
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese el nombre de la tienda" required>
+                                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese el nombre del usuario" required>
                                     <label for="floatingInput">Nombre</label>
                                 </div>
-                                <!-- RADIO DE ESTADO -->
-                                <fieldset class="row mb-3">
-                                    <legend class="col-form-label col-sm-2 pt-0">Estado</legend>
-                                    <div class="col-sm-10">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="estado" id="activa" value="1" checked>
-                                            <label class="form-check-label" for="activa">Activa</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="estado" id="inactiva" value="2">
-                                            <label class="form-check-label" for="inactiva">Inactiva</label>
-                                        </div>
-                                    </div>
-                                </fieldset>
+                                <!-- CAMPO DE APELLIDO -->
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Ingrese el apellido del usuario" required>
+                                    <label for="floatingInput">Apellido</label>
+                                </div>
+                                <!-- CAMPO DE USERNAME -->
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="username" name="username" placeholder="Ingrese el username del usuario" required>
+                                    <label for="floatingInput">Username</label>
+                                </div>
+                                <!-- CAMPO DE EMAIL -->
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Ingrese el email del usuario" required>
+                                    <label for="floatingInput">Email</label>
+                                </div>
+                                <!-- CAMPO DE PASSWORD -->
+                                <div class="form-floating mb-3">
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="Ingrese el password del usuario" required>
+                                    <label for="floatingInput">Password</label>
+                                </div>
                                 <!-- BOTÓN DE REGISTRAR -->
                                 <button type="submit" class="btn btn-primary rounded-pill m-2">Registrar</button>
                             </form>
@@ -87,7 +93,7 @@ if ($_SESSION['session']['username'] == null || $_SESSION['session']['username']
     ?>
     
     <!-- SE INCLUYEN EL JS CORRESPONDIENTE A ESTA PÁGINA -->
-    <script src="../js/registrar_tienda.js"></script>
+    <script src="../js/registrar_usuario.js"></script>
 </body>
 
 </html>
