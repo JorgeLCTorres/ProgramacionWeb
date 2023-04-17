@@ -17,8 +17,8 @@ foreach ($tiendas as $fila) {
             echo "<td><a class='inactiva'>Inactiva</a></td>";
         }
         // BOTONES PARA REALIZAR ACCIONES COMO EDITAR, BORRAR E INGRESAR A LA TIENDA DE LA FILA ACTUAL
-        echo "<td><button onclick=\"location.href='./editar_tienda.php?tienda=" . $fila['nombre'] . "'\" type='button' class='btn btn-warning rounded-pill m-2'>Editar</button></td>";
-        echo "<td><button onclick=\"location.href='./registrar_tienda.php?tienda=" . $fila['nombre'] . "'\" type='button' class='btn btn-danger rounded-pill m-2'>Borrar</button></td>";
+        echo "<td><button onclick=\"location.href='./editar_tienda.php?id_tienda=" . $fila['id'] . "'\" type='button' class='btn btn-warning rounded-pill m-2'>Editar</button></td>";
+        echo "<td><button onClick='confirmar_borrar(" . $fila['id'] . ")' type='button' class='btn btn-danger rounded-pill m-2'>Borrar</button></td>";
         echo "<td><button onclick=\"location.href='../controller/change-store.php?tienda=" . $fila['nombre'] . "&id_tienda=" . $fila['id'] . "'\" type='button' class='btn btn-success rounded-pill m-2'>Ingresar</button></td>";
         echo "</tr>";
     }

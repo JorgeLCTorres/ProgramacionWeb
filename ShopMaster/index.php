@@ -8,6 +8,7 @@
     <!-- SweetAlert2 -->
     <link rel="stylesheet" href="./plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
     <link rel="stylesheet" href="./css/login.css">
+    <link rel="icon" href="./img/shop.svg">
     <title>Login</title>
     <!-- ESTILO DE PARA NOMBRE DE INTEGRANTES -->
     <link href="./css/nombres.css" rel="stylesheet">

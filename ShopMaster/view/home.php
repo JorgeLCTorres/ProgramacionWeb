@@ -180,6 +180,7 @@ if ($_SESSION['session']['username'] == null || $_SESSION['session']['username']
 
     <!-- Page JS -->
     <script type="text/javascript" language="javascript" src="../datatables/js/jquery.dataTables.js"></script>
+    <script src="../js/borrar_tienda.js"></script>
     <!-- SE INCLUYEN UN SCRIPT PARA EL FUNCIONAMIENTO DE LA DATATABLE -->
     <script>
         $(document).ready(function () {
