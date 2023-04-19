@@ -15,8 +15,8 @@ foreach ($usuarios as $fila) {
     echo "<td>" . $fila['email'] . "</td>";
     echo "<td>" . $fila['fecha_registro'] . "</td>";
     // BOTONES PARA REALIZAR ACCIONES COMO EDITAR Y BORRAR EL USUARIO DE LA FILA ACTUAL
-    echo "<td><button onclick=\"location.href='#'\" type='button' class='btn btn-warning rounded-pill m-2'>Editar</button></td>";
-    echo "<td><button onclick=\"location.href='#'\" type='button' class='btn btn-danger rounded-pill m-2'>Borrar</button></td>";
+    echo "<td><button onclick=\"location.href='./editar_usuario.php?id_usuario=" . $fila['id'] . "'\" type='button' class='btn btn-warning rounded-pill m-2'>Editar</button></td>";
+    echo "<td><button onclick='confirmar_borrar(" . $fila['id'] . ")' type='button' class='btn btn-danger rounded-pill m-2'>Borrar</button></td>";
     echo "</tr>";
 }
 ?>

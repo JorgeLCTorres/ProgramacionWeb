@@ -12,21 +12,21 @@ var Toast = Swal.mixin({
 });
 
 // FUNCION PARA CONFIRMAR SI SE DESEA BORRAR EL REGISTRO
-function confirmar_borrar(store_id) {
+function confirmar_borrar(id_categoria) {
     Toast.fire().then((result) => {
         // SI SE CONFIRMA LA ELIMINACION ENTONCES SE REALIZA EL PROCESO
         if (result.isConfirmed) {
             $.ajax({
                 // SE ESPECIFICA QUE LA SOLICITUD SERA DE TIPO POST
                 type: "POST",
-                // SE ESPECIFICA LA URL A LA QUE SE ENVIARA EL ID DE LA TIENDA A ELIMINAR
-                url: "../controller/crtl-borrar_tienda.php?id_tienda=" + store_id,
+                // SE ESPECIFICA LA URL A LA QUE SE ENVIARA EL ID DE LA CATEGORÍA A ELIMINAR
+                url: "../controller/crtl-borrar_categoria.php?id_categoria=" + id_categoria,
                 // SI LA SOLICITUD SE REALIZA CORRECTAMENTE ENTONCES SE MUESTRA UN MODAL SWEETALERT
                 success: function (r) {
-                    Swal.fire("Eliminada con éxito", "La tienda ha sido eliminada", "success").then((res) => {
+                    Swal.fire("Eliminada con éxito", "La categoría ha sido eliminada", "success").then((res) => {
                         // SI SE CONFIRMA EL MODAL DE ELIMINACIÓN EXITOSA ENTONCES SE RECARGA LA PÁGINA
                         if (res.isConfirmed) {
-                            window.location.href = '../view/home.php';
+                            window.location.href = '../view/categorias.php';
                         }
                     });
                 }

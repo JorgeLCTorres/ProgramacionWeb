@@ -10,7 +10,7 @@ if ($_SESSION['session']['username'] == null || $_SESSION['session']['username']
 <html lang="en">
 
 <head>
-    <title>Categorias</title>
+    <title>Inventario</title>
     <!-- SE INCLUYEN LAS ETIQUETAS DE REFERENCIA link -->
     <?php
     include("./layouts/head.php");
@@ -56,44 +56,52 @@ if ($_SESSION['session']['username'] == null || $_SESSION['session']['username']
                 //SI LA TIENDA ESTA ACTIVA ENTONCES SE MUESTRA EL CONTENIDO
             } else {
                 ?>
-                <!-- TABLA DE CATEGORIAS -->
+                <!-- TABLA DE INVENTARIO -->
                 <div class="container-fluid pt-4 px-4">
                     <div class="bg-secondary text-center rounded p-4">
                         <div class="d-flex align-items-center justify-content-between mb-4">
-                            <h6 class="mb-0">Categorias</h6>
-                            <a href="registrar_categoria.php">Agregar nueva categoria</a>
+                            <h6 class="mb-0">Inventario</h6>
+                            <a href="registrar_producto.php">Agregar nuevo producto</a>
                         </div>
                         <div class="container-xxl flex-grow-1 container-p-y">
                             <table id="example" class="display table-responsive text-nowrap" style="width:100%">
                                 <thead>
                                     <tr>
+                                        <th>Código</th>
                                         <th>Nombre</th>
-                                        <th>Descripción</th>
                                         <th>Fecha Registro</th>
+                                        <th>Precio Producto</th>
+                                        <th>Categoría</th>
+                                        <th>Stock</th>
                                         <th>Editar</th>
                                         <th>Borrar</th>
+                                        <th>Detalles</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <!-- SE INCLUYE EL ARCHIVO QUE IMPRIME CADA UNA DE LAS TIENDAS DENTRO DE LA DATATABLE -->
+                                    <!-- SE INCLUYE EL ARCHIVO QUE IMPRIME CADA UNO DE LOS PRODUCTOS DENTRO DE LA DATATABLE -->
                                     <?php
-                                    include("../controller/crtl-categorias.php");
+                                    include("../controller/crtl-inventario.php");
                                     ?>
                                 </tbody>
                                 <tfoot>
                                     <tr>
+                                        <th>Código</th>
                                         <th>Nombre</th>
-                                        <th>Descripción</th>
                                         <th>Fecha Registro</th>
+                                        <th>Precio Producto</th>
+                                        <th>Categoría</th>
+                                        <th>Stock</th>
                                         <th>Editar</th>
                                         <th>Borrar</th>
+                                        <th>Detalles</th>
                                     </tr>
                                 </tfoot>
                             </table>
                         </div>
                     </div>
                 </div>
-                <!-- TABLA DE CATEGORIAS END -->
+                <!-- TABLA DE INVENTARIO END -->
                 <?php
             }
             ?>
@@ -119,8 +127,8 @@ if ($_SESSION['session']['username'] == null || $_SESSION['session']['username']
 
     <!-- Page JS -->
     <script type="text/javascript" language="javascript" src="../datatables/js/jquery.dataTables.js"></script>
-    <!-- SE INCLUYE UN SCRIPT PARA EL FUNCIONAMIENTO DEL BOTÓN BORRAR CATEGORÍA -->
-    <script src="../js/borrar_categoria.js"></script>
+    <!-- SE INCLUYE UN SCRIPT PARA EL FUNCIONAMIENTO DEL BOTÓN BORRAR INVENTARIO -->
+    <script src="../js/borrar_inventario.js"></script>
     <!-- SE INCLUYE UN SCRIPT PARA EL FUNCIONAMIENTO DE LA DATATABLE -->
     <script>
         $(document).ready(function () {

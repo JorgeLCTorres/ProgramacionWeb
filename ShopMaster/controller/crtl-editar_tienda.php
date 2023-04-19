@@ -6,17 +6,15 @@ if (isset($_POST['nombre']) && isset($_POST['estado'])) {
     $store_name = $_POST['nombre'];
     $store_state = $_POST['estado'];
     $store_id = $_POST['id_tienda'];
-    // OBTIENE LOS DATOS DE LA DB DE LA TIENDA CON EL NOMBRE Y ESTADO SI ES QUE EXISTE
-    // $store = registered_store($store_id, $store_name);
+    // OBTIENE LOS DATOS DE LA DB DE LA TIENDA CON EL ID SI ES QUE EXISTE
     $store = buscar_tienda($store_id);
     // OBTIENE LOS DATOS DE LA DB DE LA TIENDA CON EL NOMBRE SI ES QUE EXISTE
     $store_exist = search_store($store_name);
     // CONDICION PARA SABER SI NO HAY REGISTRO EN LA DB, CASO CONTRARIO SE ATRAPARA CON MODAL
     if ($store[0]['nombre'] != $store_name || $store[0]['estado'] != $store_state) {
         if (count($store_exist) != 1 || $store_exist[0]['id'] == $store_id) {
-            // SE INSERTA LA TIENDA EN LA DB
+            // SE ACTUALIZA LA TIENDA EN LA DB
             $result = update_store($store_id, $store_name, $store_state);
-            //$result = getall_stores();
             // CONDICION PARA SABER SI LA INSERCION FUE EXITOSA
             if (!$result) {
                 $result['status'] = 1;

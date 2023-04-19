@@ -12,8 +12,8 @@ foreach ($categorias as $fila) {
     echo "<td>" . $fila['descripcion'] . "</td>";
     echo "<td>" . $fila['fecha_registro'] . "</td>";
     // BOTONES PARA REALIZAR ACCIONES COMO EDITAR Y BORRAR LA CATEGORIA DE LA FILA ACTUAL
-    echo "<td><button onclick=\"location.href='#'\" type='button' class='btn btn-warning rounded-pill m-2'>Editar</button></td>";
-    echo "<td><button onclick=\"location.href='#'\" type='button' class='btn btn-danger rounded-pill m-2'>Borrar</button></td>";
+    echo "<td><button onclick=\"location.href='./editar_categoria.php?id_categoria=" . $fila['id'] . "'\" type='button' class='btn btn-warning rounded-pill m-2'>Editar</button></td>";
+    echo "<td><button onclick='confirmar_borrar(" . $fila['id'] . ")' type='button' class='btn btn-danger rounded-pill m-2'>Borrar</button></td>";
     echo "</tr>";
 }
 ?>

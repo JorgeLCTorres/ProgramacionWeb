@@ -56,15 +56,11 @@ if ($_SESSION['session']['username'] == null || $_SESSION['session']['username']
                 <!-- SE AGREGA LA OPCIÓN DE Home QUE REDIRECCIONA AL ARCHIVO home.php -->
                 <a href="./home.php" class="nav-item nav-link"><i class="fa fa-home me-2"></i></i>Home</a>
                 <!-- SE AGREGA LA OPCIÓN DE Inventario QUE REDIRECCIONA AL ARCHIVO -->
-                <a href="#" class="nav-item nav-link"><i class="fa fa-book me-2"></i>Inventario</a>
+                <a href="./inventario.php" class="nav-item nav-link"><i class="fa fa-book me-2"></i>Inventario</a>
                 <!-- SE AGREGA LA OPCIÓN DE Inventario QUE REDIRECCIONA AL ARCHIVO usuarios.php -->
                 <a href="./usuarios.php" class="nav-item nav-link"><i class="fa fa-users me-2"></i>Usuarios</a>
                 <!-- SE AGREGA LA OPCIÓN DE Inventario QUE REDIRECCIONA AL ARCHIVO -->
                 <a href="./categorias.php" class="nav-item nav-link"><i class="fa fa-list me-2"></i>Categorías</a>
-                <!-- SE AGREGA LA OPCIÓN DE Inventario QUE REDIRECCIONA AL ARCHIVO -->
-                <a href="#" class="nav-item nav-link"><i class="fa fa-tags me-2"></i>Realizar venta</a>
-                <!-- SE AGREGA LA OPCIÓN DE Inventario QUE REDIRECCIONA AL ARCHIVO -->
-                <a href="#" class="nav-item nav-link"><i class="fa fa-clock me-2"></i>Historial de venta</a>
                 <?php
             }
             ?>

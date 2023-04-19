@@ -34,23 +34,6 @@ function buscar_tienda($store_id)
     return $results;
 }
 
-// FUNCION QUE RETORNA UN QUERY QUE BUSCA UNA TIENDA EN BASE AL NOMBRE Y ESTADO DE ESTA
-function registered_store($store_id, $store_name)
-{
-    global $pdo;
-    // QUERY QUE OBTIENE LOS DATOS DE UNA TIENDA EN BASE A SU NOMBRE Y ESTADO
-    $sql = "SELECT * FROM tienda WHERE id = '$store_id' AND nombre = '$store_name'";
-    //SE PREPARA LA SENTENCIA SQL
-    $statement = $pdo->prepare($sql);
-    //SE EJECUTA LA SENTENCIA SQL
-    $statement->execute();
-    //SE DEVUELVEN LOS RESULTADOS EN FORMA DE MATRIZ DE OBJETOS
-    $results = $statement->fetchAll();
-    //SE RETORNA LA MATRIZ DE OBJETOS
-    return $results;
-}
-
-
 // FUNCION QUE RETORNA UN QUERY QUE INSERTA / REGISTRA UNA TIENDA
 function insert_store($store_name, $store_state)
 {

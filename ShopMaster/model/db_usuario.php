@@ -69,4 +69,53 @@ function insert_user($nombre, $apellido, $username, $email, $password, $id_tiend
     //SE RETORNA LA MATRIZ DE OBJETOS
     return $results;
 }
+
+
+function get_user_by_id($id_user)
+{
+    global $pdo;
+    // QUERY QUE OBTIENE LOS REGISTROS DE USUARIOS QUE COINCIDAN CON EL ID RECIBIDO COMO PARÁMETRO
+    $sql = "SELECT * FROM usuario WHERE id = '$id_user'";
+    //SE PREPARA LA SENTENCIA SQL
+    $statement = $pdo->prepare($sql);
+    //SE EJECUTA LA SENTENCIA SQL
+    $statement->execute();
+    //SE DEVUELVEN LOS RESULTADOS EN FORMA DE MATRIZ DE OBJETOS
+    $results = $statement->fetchAll();
+    //SE RETORNA LA MATRIZ DE OBJETOS
+    return $results;
+}
+
+function delete_user($id_usuario)
+{
+    global $pdo;
+    // QUERY QUE REALIZA UN DELETE DE UN REGISTRO EN LA TABLA USUARIO
+    $sql = "DELETE FROM usuario WHERE id = '$id_usuario'";
+    //SE PREPARA LA SENTENCIA SQL
+    $statement = $pdo->prepare($sql);
+    //SE EJECUTA LA SENTENCIA SQL
+    $statement->execute();
+    //SE DEVUELVEN LOS RESULTADOS EN FORMA DE MATRIZ DE OBJETOS
+    $results = $statement->fetchAll();
+    //SE RETORNA LA MATRIZ DE OBJETOS
+    return $results;
+}
+
+// FUNCION QUE RETORNA UN QUERY QUE ACTUALIZA LA INFORMACIÓN DEL USUARIO EN LA BASE DE DATOS
+function update_user($id_usuario, $nombre, $apellido, $username, $email, $password)
+{
+    global $pdo;
+    // QUERY QUE REALIZA UN UPDATE DE LOS DATOS NOMBRE Y DESCRIPCIÓN DE LA CATEGORÍA
+    $sql = "UPDATE usuario 
+            SET nombre = '$nombre', apellido = '$apellido', username = '$username', email = '$email', password = '$password'
+            WHERE id = '$id_usuario'";
+    //SE PREPARA LA SENTENCIA SQL
+    $statement = $pdo->prepare($sql);
+    //SE EJECUTA LA SENTENCIA SQL
+    $statement->execute();
+    //SE DEVUELVEN LOS RESULTADOS EN FORMA DE MATRIZ DE OBJETOS
+    $results = $statement->fetchAll();
+    //SE RETORNA LA MATRIZ DE OBJETOS
+    return $results;
+}
 ?>
